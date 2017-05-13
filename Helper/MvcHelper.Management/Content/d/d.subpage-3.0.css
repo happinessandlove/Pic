@@ -1,0 +1,211 @@
+﻿body { background-color: white; }
+
+/* button
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.button { display: inline-block; cursor: pointer; height: 24px; overflow: hidden; margin-left: 20px; text-decoration: none; background: url(images/d.manage.bg-x.png) no-repeat left -60px; }
+  .button:hover { background-position: left -110px; }
+  .button span { display: inline-block; height: 24px; line-height: 24px; cursor: pointer; padding: 0 20px; text-decoration: none; background: url(images/d.manage.bg-x.png) no-repeat right -85px; }
+  .button:hover span { background-position: right -135px; }
+
+/* tools
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#tools-back { height: 35px; }
+#tools { height: 35px; width: 100%; overflow: hidden; position: fixed; top: 0px; left: 0px; z-index: 10; background: url(images/d.manage.repeat-x.png) repeat-x left -100px; }
+#tool-items { float: left; height: 29px; overflow: hidden; padding: 2px 0 0 0; }
+.tool-item { display: inline-block; float: left; width: 29px; height: 29px; overflow: hidden; padding: 0 5px 0 3px; background: url(images/d.manage.icon-y.png) no-repeat right -90px; }
+  .tool-item a { display: inline-block; height: 29px; width: 29px; overflow: hidden; }
+.tool-item-custom { display: inline-block; float: left; height: 29px; overflow: hidden; padding: 0 5px 0 3px; background: url(images/d.manage.icon-y.png) no-repeat right -90px; }
+  .tool-item-custom a { display: inline-block; height: 29px;  line-height:28px; overflow: hidden; text-decoration:none; color:#1d429c }
+    .tool-item-custom a:hover { color:#eb6100 }
+
+.tool-refresh { background: url(images/d.manage.icon-x.png) no-repeat -125px -35px; }
+  .tool-refresh:hover { background-position: -125px -105px; }
+.tool-return { background: url(images/d.manage.icon-x.png) no-repeat -275px -35px; }
+  .tool-return:hover { background-position: -275px -105px; }
+.tool-create { background: url(images/d.manage.icon-x.png) no-repeat -155px -35px; }
+  .tool-create:hover { background-position: -155px -105px; }
+.tool-deletes { background: url(images/d.manage.icon-x.png) no-repeat -185px -35px; }
+  .tool-deletes:hover { background-position: -185px -105px; }
+.tool-query { background: url(images/d.manage.icon-x.png) no-repeat -215px -35px; }
+  .tool-query:hover { background-position: -215px -105px; }
+  .tool-query.tool-hilight { background: url(images/d.manage.icon-x.png) no-repeat -215px -70px; }
+    .tool-query.tool-hilight:hover { background-position: -215px -105px; }
+.tool-showAll { background: url(images/d.manage.icon-x.png) no-repeat -245px -35px; cursor: pointer; }
+  .tool-showAll:hover { background-position: -245px -105px; }
+  .tool-showAll.tool-disable { background: url(images/d.manage.icon-x.png) no-repeat -245px top; cursor:not-allowed; }
+#tool-buttons { float: right; }
+  #tool-buttons .button { margin-top: 4px; margin-left: 0px; margin-right: 10px; }
+
+/* dialog
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.dialog { width: 484px; }
+  .dialog .dialog-header { height: 30px; cursor: default; overflow: hidden; background: url(images/d.manage.jpeg.jpg) no-repeat left -85px; }
+  .dialog .dialog-title { height: 30px; padding: 0 0 0 40px; line-height: 30px; color: white; font-size: 14px; letter-spacing: 3px; cursor: default; overflow: hidden; }
+  .dialog .dialog-body { padding: 15px; *padding-bottom: 0px; background: url(images/d.manage.repeat-y.png) repeat-y left top; cursor: default; }
+    .dialog .dialog-body .dialog-icon { display: inline-block; float: left; width: 30px; height: 30px; zoom: 1; overflow: hidden; }
+    .dialog .dialog-body .dialog-message { padding-left: 15px; padding-top: 2px; line-height: 20px; overflow: hidden; font-size: 14px; }
+  .dialog.success .dialog-icon { background: url(images/d.manage.icon-y.png) no-repeat left -130px; }
+  .dialog.success .dialog-message { color: #038c00; }
+  .dialog.failure .dialog-icon { background: url(images/d.manage.icon-y.png) no-repeat left -235px; }
+  .dialog.failure .dialog-message { color: #ad260b; }
+  .dialog.error .dialog-icon { background: url(images/d.manage.icon-y.png) no-repeat left -235px; }
+  .dialog.error .dialog-message { color: #ad260b; }
+  .dialog.warning .dialog-icon { background: url(images/d.manage.icon-y.png) no-repeat left -235px; }
+  .dialog.warning .dialog-message { color: #ad260b; }
+  .dialog.confirm .dialog-icon { background: url(images/d.manage.icon-y.png) no-repeat left -200px; }
+  .dialog.confirm .dialog-message { color: #1d429c; }
+  .dialog.information .dialog-icon { background: url(images/d.manage.icon-y.png) no-repeat left -165px; }
+  .dialog.information .dialog-message { color: #298da7; }
+  .dialog .dialog-button { height: 24px; padding: 0 15px 0 0; text-align: right; background: url(images/d.manage.repeat-y.png) repeat-y left top; }
+    .dialog .dialog-button a { display: inline-block; cursor: pointer; height: 24px; overflow: hidden; margin-left: 20px; text-decoration: none; background: url(images/d.manage.bg-x.png) no-repeat left -60px; }
+      .dialog .dialog-button a:hover { background-position: left -110px; }
+      .dialog .dialog-button a span { display: inline-block; height: 24px; line-height: 24px; cursor: pointer; padding: 0 20px; text-decoration: none; background: url(images/d.manage.bg-x.png) no-repeat right -85px; }
+      .dialog .dialog-button a:hover span { background-position: right -135px; }
+  .dialog .dialog-footer { height: 10px; width: 100%; overflow: hidden; background: url(images/d.manage.other.png) no-repeat left top; }
+
+#query-dialog table { border-collapse: collapse; border-spacing: 0; border: none; }
+#query-dialog td, #query-dialog th { height: 24px; }
+#query-dialog input { height: 20px; line-height: 20px; border: 1px solid #ccc; background-color: #fbfbfb; }
+#query-dialog select { height: 22px; border: 1px solid #ccc; background-color: #fbfbfb; }
+#query-dialog #dialog-body { padding: 10px 20px; }
+#query-dialog-content { padding-left: 0px; }
+#query-dialog .col-query-logic { width: 58px; }
+#query-dialog .query-logic { width: 54px; }
+#query-dialog .col-query-property { width: 120px; }
+#query-dialog .query-property { width: 116px; }
+#query-dialog .col-query-condition { width: 82px; }
+#query-dialog .query-condition { width: 78px; }
+#query-dialog .col-query-value { width: 164px; }
+#query-dialog .query-value { width: 160px; }
+#query-dialog .query-value1 { width: 70px; }
+#query-dialog .query-value2 { width: 70px; }
+#query-dialog .col-query-operation { width: 20px; text-align: right; }
+#query-dialog .add-query-item { display: inline-block; height: 16px; padding-left: 22px; line-height: 16px; text-decoration: none; color: #eb6100; overflow: hidden; background: url(images/d.manage.icon-y.png) no-repeat 5px -275px; }
+#query-dialog .remove-query-item { display: inline-block; height: 15px; width: 15px; overflow: hidden; background: url(images/d.manage.icon-y.png) no-repeat left -295px; }
+
+/* list-page
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#deletes-tips { display: inline-block; overflow: hidden; height: 40px; width: 152px; background: url(images/d.manage.bg-x.png) no-repeat left -370px; }
+  #deletes-tips span { display: inline-block; height: 26px; line-height: 26px; width: 132px; padding: 0 10px; color: red; background: url(images/d.manage.bg-x.png) no-repeat right -400px; }
+
+.list-table { border-bottom: 1px solid #8cc1d8; border-top: 1px solid #8cc1d8; }
+  .list-table table { width: 100%; border-collapse: collapse; border-spacing: 0; border: none; }
+  .list-table thead tr { }
+  .list-table th { height: 30px; line-height: 30px; font-weight: bold; overflow: hidden; border-bottom: 1px solid #e1eef4; border-top: 1px solid #e1eef4; border-right: 1px solid #e1eef4; color: #333; cursor: default; background: url(images/d.manage.bg-x.png) no-repeat left -220px; }
+    .list-table th span { display: block; height: 30px; line-height: 30px; overflow: hidden; font-weight: bold; color: #333; cursor: default; }
+    .list-table th .sort { display: block; height: 30px; width: 100%; overflow: hidden; line-height: 30px; font-weight: bold; text-decoration: none;color: #333; background: url(images/d.manage.bg-x.png) no-repeat left -250px; }
+      .list-table th .sort:hover { background: url(images/d.manage.bg-x.png) no-repeat left -280px; }
+      .list-table th .sort.sort-Ascending { background: url(images/d.manage.bg-x.png) no-repeat left -310px; }
+        .list-table th .sort.sort-Ascending:hover { background: url(images/d.manage.bg-x.png) no-repeat left -310px; }
+    .list-table th .sort.sort-Descending { background: url(images/d.manage.bg-x.png) no-repeat left -340px; }
+      .list-table th .sort.sort-Descending:hover { background: url(images/d.manage.bg-x.png) no-repeat left -340px; }
+  .list-table td { height: 22px; padding: 2px 2px; border-right: 1px solid #e1eef4; border-bottom: 1px solid #e1eef4; cursor: default; }
+  .list-table tbody .even-row td { background-color: #f4f4f4; }
+  .list-table tbody .row-hover td { background-color: #cae8f6; }
+  /*col-no*/
+  .list-table thead .col-no { width: 36px; }
+  .list-table tbody .col-no { width: 32px; background-color: #f0ffd2; text-align: center; color: #eb6100; font-weight: bold; }
+  .list-table tbody .even-row .col-no { background-color: #dbf4a6; }
+  .list-table tbody .row-hover .col-no { background-color: #cae8f6; }
+  /*col-select*/
+  .list-table thead .col-select { width: 24px; }
+  .list-table tbody .col-select { width: 20px; background-color: #f0ffd2; text-align: center; }
+  .list-table tbody .even-row .col-select { background-color: #dbf4a6; }
+  .list-table tbody .row-hover .col-select { background-color: #cae8f6; }
+  /*col-rank*/
+  .list-table thead .col-rank { width: 36px; }
+  .list-table tbody .col-rank { width: 18px; padding: 2px 9px; background-color: #f0ffd2; text-align: center; }
+  .list-table tbody .even-row .col-rank { background-color: #dbf4a6; }
+  .list-table tbody .row-hover .col-rank { background-color: #cae8f6; }
+  .list-table .button-rank { display: inline-block; float: left; height: 20px; width: 18px; background: url(images/d.manage.icon-x.png) no-repeat -440px top; }
+  /*col-preview*/
+  .list-table thead .col-preview { width: 36px; }
+  .list-table tbody .col-preview { width: 18px; padding: 2px 9px; background-color: #f0ffd2; text-align: center; }
+  .list-table tbody .even-row .col-preview { background-color: #dbf4a6; }
+  .list-table tbody .row-hover .col-preview { background-color: #cae8f6; }
+  .list-table .button-preview { display: inline-block; float: left; height: 20px; width: 18px; background: url(images/d.manage.icon-x.png) no-repeat -465px top; }
+  /*col-details*/
+  .list-table thead .col-details { width: 36px; }
+  .list-table tbody .col-details { width: 18px; padding: 2px 9px; background-color: #f0ffd2; text-align: center; }
+  .list-table tbody .even-row .col-details { background-color: #dbf4a6; }
+  .list-table tbody .row-hover .col-details { background-color: #cae8f6; }
+  .list-table .button-details { display: inline-block; float: left; height: 20px; width: 18px; background: url(images/d.manage.icon-x.png) no-repeat -365px top; }
+  /*col-edit*/
+  .list-table thead .col-edit { width: 36px; }
+  .list-table tbody .col-edit { width: 18px; padding: 2px 9px; background-color: #f0ffd2; text-align: center; }
+  .list-table tbody .even-row .col-edit { background-color: #dbf4a6; }
+  .list-table tbody .row-hover .col-edit { background-color: #cae8f6; }
+  .list-table .button-edit { display: inline-block; float: left; height: 20px; width: 18px; background: url(images/d.manage.icon-x.png) no-repeat -390px top; }
+  /*col-delete*/
+  .list-table thead .col-delete { width: 36px; }
+  .list-table tbody .col-delete { width: 18px; padding: 2px 9px; background-color: #f0ffd2; text-align: center; }
+  .list-table tbody .even-row .col-delete { background-color: #dbf4a6; }
+  .list-table tbody .row-hover .col-delete { background-color: #cae8f6; }
+  .list-table .button-delete { display: inline-block; float: left; height: 20px; width: 18px; background: url(images/d.manage.icon-x.png) no-repeat -415px top; }
+  /*col-custom*/
+  .list-table .col-custom { text-align:center; background-color: #f0ffd2;}
+  .list-table tbody .even-row .col-custom { background-color: #dbf4a6; }
+  .list-table tbody .row-hover .col-custom { background-color: #cae8f6; }
+    .list-table .button-custom { color:#00a0e9 }
+    .list-table .button-custom:hover { color:#eb6100 }
+
+.list-table .content-outline { float: left; display: inline-block; height: 24px; line-height: 24px; overflow: hidden; }
+.checked-true { display: inline-block; height: 20px; width: 18px; background: url(images/d.manage.icon-x.png) no-repeat -490px 2px; }
+.checked-false { display: inline-block; height: 20px; width: 18px; background: url(images/d.manage.icon-x.png) no-repeat -510px 2px; }
+.checked-null { display: inline-block; height: 20px; width: 18px; background: url(images/d.manage.icon-x.png) no-repeat -530px 2px; }
+.non-img { display: inline-block; height: 20px; width: 18px; background: url(images/d.manage.icon-x.png) no-repeat -530px 2px; }
+.list-note { padding-top: 5px; padding-left: 34px; line-height: 16px; color: #2593ee; background: url(images/d.manage.icon-y.png) no-repeat -53px -395px; }
+
+/* cud create edit details
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.form-table {  }
+  .form-table table { width: 100%; border-collapse: collapse; border-spacing: 0; border: none; }
+  .form-table tbody td { height: 30px; padding-top:2px; padding-bottom:2px; }
+  .form-table tbody .form-key { padding-left: 20px; background-color: #eee; border-bottom: 1px solid #bbb; border-right: 1px solid #bbb; font-size: 14px; }
+    .form-table tbody .form-key.must { background-image: url(images/d.manage.icon-y.png); background-repeat: no-repeat; background-position: -70px -990px; }
+  .form-table tbody .form-value { padding-left: 10px; border-bottom: 1px solid #bbb; font-size:14px }
+  .form-table tbody .form-key.valign-top { vertical-align:top; padding-top:10px; }
+/* form
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.form-table .single-line { height: 26px; line-height: 26px; border: 1px solid #ccc; background-color: #fbfbfb; width: 200px; overflow: hidden; font-size:14px; }
+.form-table textarea { line-height: 18px; border: 1px solid #ccc; background-color: #fbfbfb;font-size:14px; }
+.form-table .text-focus { border: 1px solid #7ecef4; background-color: #eff9fd; }
+.form-table select { height: 28px; border: 1px solid #ccc; width: 202px; background-color: #fbfbfb;}
+.form-table select option { font-size:14px; }
+  .form-table .single-line.input-validation-error, select.input-validation-error, textarea.input-validation-error { border: 1px solid #ff8888; background-color: #fff4f4; }
+.form-table span.field-validation-error {}
+  .form-table span.field-validation-error span { padding-left:22px; color: red; display: inline-block; height: 18px; line-height: 18px;  background: url(images/d.manage.icon-y.png) no-repeat left -374px; }
+  .form-table .tips { padding: 2px 0 2px 30px; line-height: 16px; text-align: left; color: #2593ee; font-weight: normal; background-color: #f2f7f8; border-bottom: 1px solid #8cc1d8; background-image: url(images/d.manage.icon-y.png); background-repeat: no-repeat; background-position: -58px -398px; }
+/* pager
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.pager-container { clear: both; height: 26px; overflow: hidden; padding-top: 2px; background-color: #f2f7f8; }
+.pager { height: 24px; line-height: 24px; overflow: hidden; text-align: right; }
+  .pager span, .pager a { display: inline-block; overflow: hidden; height: 24px; line-height: 24px; }
+.pager-item-count { padding-right: 20px; color: #875431; }
+.pager-item-count-number { color: #eb6100; }
+.pager-page-count { padding-right: 20px; color: #875431; }
+.pager-current-page-number { color: #eb6100; }
+.pager-page-count-number { color: #eb6100; }
+.pager-no-prev-next { color: #aaa; margin-right: 8px; }
+.pager-prev-next { color: #00a0e9; text-decoration: none; margin-right: 8px; }
+  .pager-prev-next:hover { color: #eb6100; }
+.pager-prevs-nexts { color: #00a0e9; margin-right: 8px; text-decoration: none; }
+  .pager-prevs-nexts:hover { color: #eb6100; }
+.pager-number { margin-right: 8px; overflow: hidden; text-decoration: none; color: #00a0e9; }
+  .pager-number:hover { color: #eb6100; border-color: #eb6100; }
+.pager-number-current { margin-right: 8px; overflow: hidden; color: red; }
+.pager-select-container { padding-left: 15px; padding-right: 6px; }
+.pager-select { width: 40px; height: 18px; }
+
+/* uploadify
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*.uploadify { position: relative; float: left; cursor: pointer; }
+.uploadify-button-disabled { background: none; }
+.uploadify-queue { width: 400px; padding-left: 5px; }
+.uploadify-queue-item { width: 370px; padding: 10px; color: #333; overflow: hidden; border: 1px solid #a5d1e5; background-color: #e5f7ff; font-size: 11px; margin-bottom: 5px; }
+.uploadify-error { background-color: #FDE5DD !important; }
+.uploadify-queue-item .cancel a { float: right; height: 16px; width: 16px; overflow: hidden; text-indent: -9999px; background: url('/Scripts/uploadify-v3.1/uploadify-cancel.png') no-repeat left top; }
+  .uploadify-queue-item .cancel a:hover { background-position: 0 -16px; }
+.uploadify-queue-item.completed { background-color: #f0ffcf; }
+.uploadify-progress { background-color: #ddd; margin-top: 10px; width: 100%; }
+.uploadify-progress-bar { background-color: #0099FF; height: 3px; width: 1px; }*/

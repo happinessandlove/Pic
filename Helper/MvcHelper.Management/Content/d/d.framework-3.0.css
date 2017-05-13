@@ -1,0 +1,63 @@
+﻿html { width: 100%; height: 100%; overflow: hidden; }
+/*====header======================*/
+#header { height: 80px; width: 100%; background: url(images/d.manage.repeat-x.png) repeat-x left top; }
+  #header #header-body { height: 80px; width: 100%; overflow: hidden; background: url(images/d.manage.jpeg.jpg) no-repeat left top; }
+  #header #header-bar { height: 55px; width: 100%; overflow: hidden; }
+    #header #header-bar #btn-logout { float: right; display: block; width: 45px; height: 23px; margin-right: 10px; background: url(images/d.manage.icon-x.png) no-repeat left top; }
+      #header #header-bar #btn-logout:hover { background-position: left -25px; }
+    #header #header-bar #user-info { float: right; height: 24px; width: 300px; padding-right: 20px; color: white; }
+      #header #header-bar #user-info i { float: right; display: inline-block; height: 24px; width: 24px; }
+      #header #header-bar #user-info span { float: right; display: inline-block; height: 24px; line-height: 24px; }
+  #header #tab-bar { height: 25px; width: 100%; overflow: hidden; }
+  /*#header #tab-bar #menu-caption { float:left; width:160px; height:25px; overflow:hidden; background-color: #e6f1ff }
+    #header #tab-bar #menu-caption i { float:left; width:20px; height:25px; overflow:hidden; margin-left:10px;}
+    #header #tab-bar #menu-caption span { float:left; display:inline-block; width:110px; height:24px; line-height:24px; padding-top:1px; overflow:hidden; font-size:14px; }
+    #header #tab-bar #menu-caption #btn-hide-menu { float:right; display:inline-block; width:20px; height:24px; line-height:24px; padding-top:1px; overflow:hidden; text-decoration:none; font-weight:bold; font-family:SimSun,'宋体' }*/
+  #header #tool-bar { display: none; position: absolute; z-index: 1; top: 9px; left: 500px; height: 38px; width: 300px; overflow: hidden; text-align: center; background-color: yellow; }
+    #header #tool-bar .tool-bar-btn { display: inline-block; display: none; height: 38px; width: 50px; margin-right: 10px; }
+  #header #tab-bar #btn-close-all { float: left; display: inline-block; height: 21px; width: 23px;  margin-top:2px; background: url(images/d.manage.icon-x.png) no-repeat -50px top; }
+    #header #tab-bar #btn-close-all:hover { background-position: -50px -25px; }
+  #header #tab-bar #datetime { float:left; display:inline-block; width:136px; height:24px; padding-top:1px; line-height:24px; text-align:center; color:white;}
+.tab-container { float: left; height: 25px; overflow: hidden; }
+.tab { float: left; height: 25px; overflow: hidden; cursor: pointer; }
+  .tab ul { float: left; height: 25px; overflow: hidden; }
+  .tab li { float: left; }
+  .tab li, .tab span, .tab a { display: inline-block; }
+  .tab .tab-head { width: 19px; height: 25px; padding: 0 4px; background: url(images/d.manage.bg-x.png) no-repeat left top; }
+  .tab .tab-icon { width: 19px; height: 16px; margin-top: 5px; background: url(images/d.manage.icon-x.png) no-repeat -75px top; }
+  .tab .tab-title { height: 24px; line-height: 24px; padding-top: 1px; overflow: hidden; color: #052a46; background: url(images/d.manage.bg-x.png) no-repeat -10px top; }
+  .tab .tab-title { _line-height: 27px; }
+  .tab .tab-tail { width: 15px; height: 25px; padding: 0 4px; background: url(images/d.manage.bg-x.png) no-repeat right top; }
+  .tab .tab-close { height: 14px; width: 15px; margin: 7px 0 0 0; background: url(images/d.manage.icon-x.png) no-repeat -95px top; }
+    .tab .tab-close:hover { background-position: -95px -15px; }
+  .tab.tab-default .tab-tail { width:5px; padding:0px; overflow:hidden; }
+  .tab.tab-h .tab-head { background: url(images/d.manage.bg-x.png) no-repeat left -30px; }
+  .tab.tab-h .tab-icon { background: url(images/d.manage.icon-x.png) no-repeat -75px -20px; }
+  .tab.tab-h .tab-title { color: #eb6100; background: url(images/d.manage.bg-x.png) no-repeat -10px -30px; }
+  .tab.tab-h .tab-tail { background: url(images/d.manage.bg-x.png) no-repeat right -30px; }
+.tip { display: inline-block; position: absolute; overflow: hidden; z-index: 2; height: 20px; line-height: 20px; padding: 0 10px; color: #555; background-color: #fff; border: 1px solid #888; }
+
+/*====main======================*/
+#main { width: 100%; }
+
+/*----left----*/
+#left { float: left; width: 159px; height: 100%; overflow: hidden; background-color: #e6f1ff; border-right: 1px solid #666; }
+#menu-container { width: 159px; height: 100%; overflow-y: auto; }
+.menu-group { display: block; height: 28px; line-height: 28px; padding-left: 35px; overflow: hidden; border-bottom: 1px solid #77a0ab; color: #7f2d00; text-decoration: none; font-size: 14px; background-image: url(images/d.manage.bg-x.png); background-repeat: no-repeat; background-position: left -160px; }
+  .menu-group:hover, .menu-group.menu-group-h { background-position: left -190px; color: red; text-decoration: none; }
+.menu-items-container { display: none; border-bottom: 1px solid #77a0ab; }
+.menu-item { display: block; height: 24px; line-height: 24px; overflow: hidden; background-image: url(images/d.manage.icon-y.png); background-repeat: no-repeat; background-position: 27px -21px; background-color: #e3f8b3; text-decoration: none; border-top: 1px dashed #b5b5b5; }
+  .menu-item:hover, .menu-item.menu-item-h { color: #eb6100; background-position: 27px -51px; background-color: white; }
+.first-menu-item { border-top: none; }
+.menu-level-1 { }
+.menu-level-2 { padding-left: 40px; }
+.menu-level-3 { padding-left: 55px; }
+.menu-level-4 { padding-left: 70px; }
+
+/*----right----*/
+#right { float: left; height: 100%; overflow: hidden; background-color: #ffffff; }
+.tabpage-container { height: 100%; width: 100%; position: relative; }
+.tabpage { height: 100%; width: 100%; z-index: 1; position: absolute; top: 0px; left: 0px; background-color: #ffffff; }
+  .tabpage.tabpage-h { z-index: 100; }
+  .tabpage .mask { width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; z-index: 100; background-color: #eeeeee; }
+

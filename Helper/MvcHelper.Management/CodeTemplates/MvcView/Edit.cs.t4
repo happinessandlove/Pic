@@ -1,0 +1,105 @@
+﻿<#@ template language="C#" HostSpecific="True" #>
+<#@ output extension=".cshtml" #>
+<#@ include file="Imports.include.t4" #>
+<#
+var modelName = ViewDataTypeShortName;
+string pkName = GetPrimaryKeyName();
+IEnumerable<PropertyMetadata> properties = ModelMetadata.Properties;
+#>
+@model <#=modelName#>
+@{
+    Layout = "~/Views/Shared/_LayoutSubpage.cshtml";
+    string pageId = ViewBag.PageId;
+    PageInfo pageInfo = SiteDirectory.GetPageInfo(pageId);
+    PageInfo indexPage = pageInfo.Parent.Children.FirstOrDefault(s => s.Name == "Index");
+    PageInfo detailsPage = pageInfo.Parent.Children.FirstOrDefault(s => s.Name == "Details");
+	User loginUser = ViewBag.LoginUser;
+    ViewBag.Pid = pageInfo.Id;
+    ViewBag.Pclass = pageInfo.Name;
+    ViewBag.PageId = pageId + Model.<#=pkName#>;
+}
+@section Style
+{
+    <style type="text/css">
+        .form-key { width: 140px; }
+    </style>
+}
+@section ScriptHeader
+{
+    <script type="text/javascript">
+        var indexPageId = '@(indexPage == null ? "" : indexPage.Id)';
+        var detailsPageId = '@(detailsPage == null ? "" : detailsPage.Id + Model.<#=pkName#>)';
+    </script>
+}
+<div id="tools-back">
+</div>
+<div id="tools">
+    <div id="tool-items">
+        @Html.RenderRefreshToolbarItem()
+        @Html.RenderReturnToolbarItem(pageInfo)
+    </div>
+    <div id="tool-buttons">
+        <a class="button submit-edit" id="submit-edit"><span>提 交</span></a>
+    </div>
+    <div class="clear-float">
+    </div>
+</div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.<#=pkName#>)
+    <div class="form-table">
+        <table>
+            @*<thead>
+                    <tr>
+                        <th colspan="2">
+                            提示1<br/>
+                            提示2
+                        </th>
+                    </tr>
+                </thead>*@
+            <tbody>
+<#
+foreach (PropertyMetadata property in properties) 
+{
+    if (property.Scaffold && !property.IsPrimaryKey && !property.IsForeignKey && !(property.IsAssociation  && property.IsIndependentAssociation) && !property.IsReadOnly && property.PropertyName.ToLower()!="rank") 
+	{
+#>
+				<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.<#=property.PropertyName#>, 4)</td>
+<#
+		if(property.PropertyName.ToLower()=="gender")
+		{
+#>
+					<td class="form-value">@Html.GenderFor(model => model.<#=property.PropertyName#>)&nbsp;@Html.ValidationMessageFor(model => model.<#=property.PropertyName#>)</td>
+<#
+		}
+		else if(property.IsAssociation)
+		{
+#>
+					<td class="form-value">@Html.SelectListFor(model => model.<#=GetRelatedModelMetadata(property).ForeignKeyPropertyNames.First()#>, model => model.<#=property.PropertyName#>)&nbsp;@Html.ValidationMessageFor(model => model.<#=GetRelatedModelMetadata(property).ForeignKeyPropertyNames.First()#>)</td>
+<#
+		}
+		else
+		{
+#>
+					<td class="form-value">@Html.EditorFor(model => model.<#=property.PropertyName#>)&nbsp;@Html.ValidationMessageFor(model => model.<#=property.PropertyName#>)</td>
+<#
+		}
+#>
+				</tr>
+<#}}#>
+            </tbody>
+        </table>
+    </div>
+}
+@section ScriptFooter
+{
+	@Scripts.Render("~/scripts/jquery-validate")
+    <script type="text/javascript" language="javascript">
+        $(function ()
+        {
+        });
+    </script>
+}
+<#@ include file="ModelMetadataFunctions.cs.include.t4" #>

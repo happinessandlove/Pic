@@ -1,0 +1,13 @@
+﻿.spinner-container { position: relative; display: inline-block; height: 27px; width: 44px; padding: 0 15px; overflow: hidden; }
+    .spinner-container .spinner-input { display: block; width: 44px; height: 25px; overflow: hidden; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; }
+        .spinner-container .spinner-input input { position: absolute; top: 1px; left: 15px; border: 0px; border:none; width: 44px; height: 25px; text-align: center; line-height: 25px; }
+    .spinner-container .spinner-sub,
+    .spinner-container .spinner-add { position: absolute; display: block; overflow: hidden; width: 15px; height: 27px; top: 0px; cursor: pointer; z-index: 1; background-image: url(images/d.icon.png); background-repeat: no-repeat; }
+    .spinner-container .spinner-sub { left: 0px; background-position: -55px 0px; }
+        .spinner-container .spinner-sub:hover { background-position: -70px 0px; }
+    .spinner-container .spinner-add { right: 0px; background-position: -10px 0px; }
+        .spinner-container .spinner-add:hover { background-position: -25px 0px; }
+        .spinner-container .spinner-add.disable { background-position: -40px 0px; cursor: not-allowed; }
+    .spinner-container .spinner-sub.disable { background-position: -85px 0px; cursor: not-allowed; }
+    .spinner-container .spinner-add.disable:hover { background-position: -40px 0px; }
+    .spinner-container .spinner-sub.disable:hover { background-position: -85px 0px; }

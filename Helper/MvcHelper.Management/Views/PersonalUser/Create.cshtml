@@ -1,0 +1,108 @@
+﻿@model User
+@{
+    Layout = "~/Views/Shared/_LayoutSubpage.cshtml";
+    string pageId = ViewBag.PageId;
+    PageInfo pageInfo = SiteDirectory.GetPageInfo(pageId);
+    PageInfo indexPage = pageInfo.Parent.Children.FirstOrDefault(s => s.Name == "Index");
+    ViewBag.Pid = pageInfo.Id;
+    ViewBag.Pclass = pageInfo.Name;
+}@section Style
+{
+    <style type="text/css">
+        .form-key { width: 140px; }
+    </style>
+}@section ScriptHeader
+{
+    <script type="text/javascript">
+        var indexPageId = '@(indexPage == null ? "" : indexPage.Id)';
+    </script>
+}
+<div id="tools-back">
+</div>
+<div id="tools">
+    <div id="tool-items">
+        @Html.RenderRefreshToolbarItem()
+        @Html.RenderReturnToolbarItem(pageInfo)
+    </div>
+    <div id="tool-buttons">
+        <a class="button submit-create" id="submit-create"><span>提 交</span></a>
+    </div>
+    <div class="clear-float">
+    </div>
+</div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-table">
+        <table>
+            @*<thead>
+                    <tr>
+                        <th colspan="2">
+                            提示1<br/>
+                            提示2
+                        </th>
+                    </tr>
+                </thead>*@
+            <tbody>
+				<tr>
+					<td class="form-key must">@Html.DisplayNameFor(model => model.RoleId)</td>
+					<td class="form-value">@Html.SelectListFor(model => model.RoleId, model => model.Role)&nbsp;@Html.ValidationMessageFor(model => model.RoleId)</td>
+				</tr>
+				<tr>
+					<td class="form-key must">@Html.DisplayNameFor(model => model.LoginName)</td>
+					<td class="form-value">@Html.EditorFor(model => model.LoginName)&nbsp;@Html.ValidationMessageFor(model => model.LoginName)</td>
+				</tr>
+				<tr>
+					<td class="form-key must">@Html.DisplayNameFor(model => model.Pwd)</td>
+					<td class="form-value">@Html.EditorFor(model => model.Pwd)&nbsp;@Html.ValidationMessageFor(model => model.Pwd)</td>
+				</tr>
+				<tr>
+					<td class="form-key must">@Html.DisplayNameFor(model => model.Name)</td>
+					<td class="form-value">@Html.EditorFor(model => model.Name)&nbsp;@Html.ValidationMessageFor(model => model.Name)</td>
+				</tr>
+				<tr>
+					<td class="form-key must">@Html.DisplayNameFor(model => model.LivingAddress)</td>
+					<td class="form-value">@Html.EditorFor(model => model.LivingAddress)&nbsp;@Html.ValidationMessageFor(model => model.LivingAddress)</td>
+				</tr>
+				<tr>
+					<td class="form-key must">@Html.DisplayNameFor(model => model.TelephoneNumber)</td>
+					<td class="form-value">@Html.EditorFor(model => model.TelephoneNumber)&nbsp;@Html.ValidationMessageFor(model => model.TelephoneNumber)</td>
+				</tr>
+				<tr>
+					<td class="form-key must">@Html.DisplayNameFor(model => model.PhoneNumber)</td>
+					<td class="form-value">@Html.EditorFor(model => model.PhoneNumber)&nbsp;@Html.ValidationMessageFor(model => model.PhoneNumber)</td>
+				</tr>
+				<tr>
+					<td class="form-key must">@Html.DisplayNameFor(model => model.IDCardNumber)</td>
+					<td class="form-value">@Html.EditorFor(model => model.IDCardNumber)&nbsp;@Html.ValidationMessageFor(model => model.IDCardNumber)</td>
+				</tr>
+				<tr>
+					<td class="form-key must">@Html.DisplayNameFor(model => model.IsAuthorized)</td>
+					<td class="form-value">@Html.EditorFor(model => model.IsAuthorized)&nbsp;@Html.ValidationMessageFor(model => model.IsAuthorized)</td>
+				</tr>
+				<tr>
+					<td class="form-key must">@Html.DisplayNameFor(model => model.AuthorizedTime)</td>
+					<td class="form-value">@Html.TextBoxFor(model => model.AuthorizedTime, new { @class = "text-box single-line datepicker" })&nbsp;@Html.ValidationMessageFor(model => model.AuthorizedTime)</td>
+				</tr>
+				<tr>
+					<td class="form-key must">@Html.DisplayNameFor(model => model.CreateTime)</td>
+					<td class="form-value">@Html.TextBoxFor(model => model.CreateTime, new { @class = "text-box single-line datepicker" })&nbsp;@Html.ValidationMessageFor(model => model.CreateTime)</td>
+				</tr>
+				<tr>
+					<td class="form-key must">@Html.DisplayNameFor(model => model.Introduction)</td>
+					<td class="form-value">@Html.EditorFor(model => model.Introduction)&nbsp;@Html.ValidationMessageFor(model => model.Introduction)</td>
+				</tr>
+            </tbody>
+        </table>
+    </div>
+}
+@section ScriptFooter
+{
+@Scripts.Render("~/scripts/jquery-validate")
+    <script type="text/javascript" language="javascript">
+        $(function ()
+        {
+        });
+    </script>
+}
+

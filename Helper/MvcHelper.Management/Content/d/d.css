@@ -1,0 +1,23 @@
+﻿/*----元素初始化
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+body, h1, h2, h3, h4, h5, h6, div, span, ul, dl, ol, li, dd, dt, i, label, font, a, b, p, blockquote, pre, fieldset, tr, td, th, img, font, form, input, select, textarea, button, figure { margin: 0; }
+body, input, option, a, textarea, button { font-size: 12px; line-height: 1.5; color: #35424a; font-family: 'Microsoft YaHei','微软雅黑',Arial,SimSun,'宋体'; }
+ol, ul, dl, menu { list-style: none; margin: 0; padding: 0; }
+table { border-collapse: collapse; border-spacing: 0; }
+img { vertical-align: middle; border: 0 none; }
+a * { cursor: pointer; }
+address, em, i { font-style: normal; }
+abbr, acronym { font-variant: normal; }
+iframe { width: 100%; height: 100%; border: 0 none; }
+fieldset { border: 0 none; }
+blockquote, q { quotes: none; }
+    blockquote:before, blockquote:after, q:before, q:after { content: ''; }
+input, select, button { vertical-align: middle; }
+    button::-moz-focus-inner, input[type=reset]::-moz-focus-inner, input[type=button]::-moz-focus-inner, input[type=submit]::-moz-focus-inner, input[type=file] > input[type=button]::-moz-focus-inner { border: 0 none; padding: 0; }
+:focus { border: none; -webkit-box-shadow: none; box-shadow: none; outline: none; }
+:active { outline: 0 none; }
+.clearfix { *zoom: 1; }
+    .clearfix:after { content: "\0020"; display: block; visibility: hidden; clear: both; height: 0; overflow: hidden; }
+textarea { line-height: 20px; }
+label { cursor: pointer; }
+    label * { cursor: pointer; }

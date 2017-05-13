@@ -1,0 +1,2 @@
+﻿.dialog {  display: inline-block; padding: 8px; background: rgba(100,100,100,0.3); -moz-box-shadow: 0 0 8px #444; -webkit-box-shadow: 0 0 8px #444; box-shadow: 0 0 8px #444; }
+  .loading { height:32px; width:32px; overflow: hidden; background: url(images/loader.gif) no-repeat center center; }

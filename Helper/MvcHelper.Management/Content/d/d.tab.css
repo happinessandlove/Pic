@@ -1,0 +1,8 @@
+﻿.tab8 { overflow: hidden; }
+    .tab8 .tabs { overflow: hidden; }
+    .tab8 .tabs .tab-item { float: left; display: inline-block; overflow: hidden; }
+        .tab8 .tabs .tab-item .tab-item-text { display: inline-block; overflow: hidden; text-align: center; text-decoration: none; }
+    .tab8 .tabs .tab-item-current { }
+        .tab8 .tabs .tab-item-current .tab-item-text { }
+    .tab8 .tabpages { }
+        .tab8 .tabpages .tabpage-item { display: none; }

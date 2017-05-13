@@ -1,0 +1,102 @@
+﻿@model User
+@{
+    Layout = "~/Views/Shared/_LayoutSubpage.cshtml";
+    string pageId = ViewBag.PageId;
+    PageInfo pageInfo = SiteDirectory.GetPageInfo(pageId);
+    PageInfo indexPage = pageInfo.Parent.Children.FirstOrDefault(s => s.Name == "Index");
+	User loginUser = ViewBag.LoginUser;
+    ViewBag.Pid = pageInfo.Id;
+    ViewBag.Pclass = pageInfo.Name;
+}
+@section Style
+{
+    <style type="text/css">
+        .form-key { width: 140px; }
+    </style>
+}
+@section ScriptHeader
+{
+    <script type="text/javascript">
+        var indexPageId = '@(indexPage == null ? "" : indexPage.Id)';
+    </script>
+}
+<div id="tools-back">
+</div>
+<div id="tools">
+    <div id="tool-items">
+        @Html.RenderRefreshToolbarItem()
+        @Html.RenderReturnToolbarItem(pageInfo)
+    </div>
+    <div id="tool-buttons">
+        <a class="button submit-create" id="submit-create"><span>提 交</span></a>
+    </div>
+    <div class="clear-float">
+    </div>
+</div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-table">
+        <table>
+            @*<thead>
+                    <tr>
+                        <th colspan="2">
+                            提示1<br/>
+                            提示2
+                        </th>
+                    </tr>
+                </thead>*@
+            <tbody>
+				<tr>
+					<td class="form-key must">@Html.DisplayNameFor(model => model.Role, 4)</td>
+					<td class="form-value">@Html.SelectListFor(model => model.RoleId, model => model.Role)&nbsp;@Html.ValidationMessageFor(model => model.RoleId)</td>
+				</tr>
+                <tr>
+                    <td class="form-key must">@Html.DisplayNameFor(model => model.Status, 4)</td>
+                    <td class="form-value">@Html.SelectListFor(model => model.Status)&nbsp;@Html.ValidationMessageFor(model => model.Status)</td>
+                </tr>
+				<tr>
+					<td class="form-key must">@Html.DisplayNameFor(model => model.LoginName, 4)</td>
+					<td class="form-value">@Html.EditorFor(model => model.LoginName)&nbsp;@Html.ValidationMessageFor(model => model.LoginName)</td>
+				</tr>
+				<tr>
+					<td class="form-key must">@Html.DisplayNameFor(model => model.Password, 4)</td>
+					<td class="form-value">@Html.EditorFor(model => model.Password)&nbsp;@Html.ValidationMessageFor(model => model.Password)</td>
+				</tr>
+				<tr>
+					<td class="form-key must">@Html.DisplayNameFor(model => model.Name, 4)</td>
+					<td class="form-value">@Html.EditorFor(model => model.Name)&nbsp;@Html.ValidationMessageFor(model => model.Name)</td>
+				</tr>
+				<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.LivingAddress, 4)</td>
+					<td class="form-value">@Html.EditorFor(model => model.LivingAddress)&nbsp;@Html.ValidationMessageFor(model => model.LivingAddress)</td>
+				</tr>
+				<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.TelephoneNumber, 4)</td>
+					<td class="form-value">@Html.EditorFor(model => model.TelephoneNumber)&nbsp;@Html.ValidationMessageFor(model => model.TelephoneNumber)</td>
+				</tr>
+				<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.MobileNumber, 4)</td>
+					<td class="form-value">@Html.EditorFor(model => model.MobileNumber)&nbsp;@Html.ValidationMessageFor(model => model.MobileNumber)</td>
+				</tr>
+				<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.IDCardNumber, 4)</td>
+					<td class="form-value">@Html.EditorFor(model => model.IDCardNumber)&nbsp;@Html.ValidationMessageFor(model => model.IDCardNumber)</td>
+				</tr>
+				<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.Introduction, 4)</td>
+					<td class="form-value">@Html.EditorFor(model => model.Introduction)&nbsp;@Html.ValidationMessageFor(model => model.Introduction)</td>
+				</tr>
+            </tbody>
+        </table>
+    </div>
+}
+@section ScriptFooter
+{
+	@Scripts.Render("~/scripts/jquery-validate")
+    <script type="text/javascript" language="javascript">
+        $(function ()
+        {
+        });
+    </script>
+}

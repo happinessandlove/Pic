@@ -1,0 +1,140 @@
+﻿@model Role
+@{
+    Layout = "~/Views/Shared/_LayoutSubpage.cshtml";
+    string pageId = ViewBag.PageId;
+    PageInfo pageInfo = SiteDirectory.GetPageInfo(pageId);
+    PageInfo indexPage = pageInfo.Parent.Children.FirstOrDefault(s => s.Name == "Index");
+    ViewBag.Pid = pageInfo.Id;
+    ViewBag.Pclass = pageInfo.Name;
+    List<PageInfo> pageInfos = HttpContext.Current.Application["SiteDirectories"] as List<PageInfo>;
+}@section Style
+{
+    <style type="text/css">
+        .form-key { width: 140px; }
+        #Remarks { width: 90%; }
+        #form-value-MenuId { padding-left: 0px; }
+        .area-container { padding-top: 5px; }
+        .area { padding: 5px 0 5px 10px; background-color: #d2f1ff; font-weight: bold; }
+        .controller-container { padding: 5px 0 5px 30px; }
+        .controller { display: inline-block; width: 140px; font-weight: bold; }
+        .action { display: inline-block; padding-right: 8px; }
+    </style>
+}@section ScriptHeader
+{
+    <script type="text/javascript">
+        var indexPageId = '@(indexPage == null ? "" : indexPage.Id)';
+    </script>
+}
+<div id="tools-back">
+</div>
+<div id="tools">
+    <div id="tool-items">
+        @Html.RenderRefreshToolbarItem()
+        @Html.RenderReturnToolbarItem(pageInfo)
+    </div>
+    <div id="tool-buttons">
+        <a class="button submit-create" id="submit-create" preevent="submit"><span>提 交</span></a>
+    </div>
+    <div class="clear-float">
+    </div>
+</div>
+<div class="form-table">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.MenuId)
+        <table>
+            @*<thead>
+                    <tr>
+                        <th colspan="2">
+                            提示1<br/>
+                            提示2
+                        </th>
+                    </tr>
+                </thead>*@
+            <tbody>
+                <tr>
+                    <td class="form-key must">@Html.DisplayNameFor(model => model.Name)</td>
+                    <td class="form-value">@Html.EditorFor(model => model.Name)&nbsp;@Html.ValidationMessageFor(model => model.Name)</td>
+                </tr>
+                <tr>
+                    <td class="form-key">@Html.DisplayNameFor(model => model.Remarks)</td>
+                    <td class="form-value">@Html.EditorFor(model => model.Remarks)&nbsp;@Html.ValidationMessageFor(model => model.Remarks)</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+    <table>
+        <tbody>
+            <tr>
+                <td class="form-key must valign-top">@Html.DisplayNameFor(model => model.MenuId)</td>
+                <td class="form-value" id="form-value-MenuId">
+                    @foreach (PageInfo area in pageInfos.Where(s => s.DirectoryType == DirectoryType.Area).ToList())
+                    {
+                        <div class="area-container">
+                            <div class="area"><label><input type="checkbox" class="check-area" name="@area.Id" id="@area.Id" /> @area.NameCn</label></div>
+                            @foreach (PageInfo controller in area.Children)
+                            {
+                                <div class="controller-container">
+                                    <span class="controller"><label><input type="checkbox" class="check-controller" name="@controller.Id" id="@controller.Id" /> @controller.NameCn：</label></span>
+                                    @foreach (PageInfo action in controller.Children)
+                                    {
+                                        <span class="action"><label><input type="checkbox" class="check-action" name="@action.Id" id="@action.Id" /> @action.NameCn</label></span>
+                                    }
+                                </div>
+                            }
+                        </div>
+                    }
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+@section ScriptFooter
+{
+    @Scripts.Render("~/scripts/jquery-validate")
+    <script type="text/javascript" language="javascript">
+        function submit()
+        {
+            if ($('input[class^="check-"]:checked').length == 0)
+            {
+                createWarningDialog({ title: '错误', message: '请选择相应的权限！' });
+                return false;
+            }
+            var s = '';
+            $.each($('input[class^="check-"]'), function (k, v)
+            {
+                var t = $(this);
+                s += ',"' + t.attr('name') + '":' + t.prop(c);
+            })
+            $('#MenuId').val('{' + s.substring(1) + '}');
+            return true;
+        }
+        var c = 'checked';
+        $(function ()
+        {
+            $('.check-area').on('click', function () { var t = $(this); t.closest('.area-container').find('.check-controller,.check-action').prop(c, t.prop(c)); });
+            $('.check-controller').on('click', function ()
+            {
+                var t = $(this), areaContainer = t.closest('.area-container');
+                t.closest('.controller-container').find('.check-action').prop(c, t.prop(c));
+                areaContainer.find('.check-area').prop(c, areaContainer.find('.check-controller:checked').length > 0);
+            });
+            $('.check-action').on('click', function ()
+            {
+                var t = $(this), controllerContainer = t.closest('.controller-container'), controller = controllerContainer.find('.check-controller'), areaContainer = t.closest('.area-container');
+                if (!t.prop(c) && t.attr('name').indexOf('Index_') == 0)
+                {
+                    controllerContainer.find('.check-action').prop(c, false);
+                }
+                if (t.prop(c) && t.attr('name').indexOf('Index_') < 0)
+                {
+                    controllerContainer.find('.check-action[name^="Index_"]').prop(c, true);
+                }
+                controller.prop(c, controllerContainer.find('.check-action:checked').length > 0);
+                areaContainer.find('.check-area').prop(c, areaContainer.find('.check-controller:checked').length > 0);
+            });
+        });
+    </script>
+}
+

@@ -1,0 +1,115 @@
+﻿@model Volunteer
+@{
+    Layout = "~/Views/Shared/_LayoutSubpage.cshtml";
+    string pageId = ViewBag.PageId;
+    PageInfo pageInfo = SiteDirectory.GetPageInfo(pageId);
+	User loginUser = ViewBag.LoginUser;
+    ViewBag.Pid = pageInfo.Id;
+    ViewBag.Pclass = pageInfo.Name;
+    ViewBag.PageId = pageId + Model.Id;
+}
+@section Style
+{
+    <style type="text/css">
+        .form-key { width: 140px; }
+    </style>
+}
+@section ScriptHeader
+{
+    <script type="text/javascript">
+    </script>
+}
+<div id="tools-back">
+</div>
+<div id="tools">
+    <div id="tool-items">
+        @Html.RenderRefreshToolbarItem()
+        @Html.RenderReturnToolbarItem(pageInfo)
+    </div>
+    <div id="tool-buttons">
+    </div>
+    <div class="clear-float">
+    </div>
+</div>
+<div class="form-table">
+    <table>
+        <tbody>
+			<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.Uuid, 4)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.Uuid)</td>
+			</tr>
+			<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.LoginName, 4)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.LoginName)</td>
+			</tr>
+			<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.Password, 4)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.Password)</td>
+			</tr>
+			<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.SmsCaptcha, 4)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.SmsCaptcha)</td>
+			</tr>
+			<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.SmsCaptchaUsedFor, 4)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.SmsCaptchaUsedFor)</td>
+			</tr>
+			<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.SmsCaptchaExpiredTime, 4)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.SmsCaptchaExpiredTime)</td>
+			</tr>
+			<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.AccessFailedCount, 4)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.AccessFailedCount)</td>
+			</tr>
+			<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.LockoutStartTime, 4)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.LockoutStartTime)</td>
+			</tr>
+			<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.LockoutDuration, 4)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.LockoutDuration)</td>
+			</tr>
+			<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.OperateToken, 4)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.OperateToken)</td>
+			</tr>
+			<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.Name, 4)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.Name)</td>
+			</tr>
+			<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.MobileNumber, 4)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.MobileNumber)</td>
+			</tr>
+			<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.TelephoneNumber, 4)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.TelephoneNumber)</td>
+			</tr>
+			<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.IDCardNumber, 4)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.IDCardNumber)</td>
+			</tr>
+			<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.RegisterTime, 4)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.RegisterTime)</td>
+			</tr>
+			<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.Status, 4)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.Status)</td>
+			</tr>
+			<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.Remark, 4)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.Remark)</td>
+			</tr>
+        </tbody>
+    </table>
+</div>
+@section ScriptFooter
+{
+    <script type="text/javascript" language="javascript">
+        $(function ()
+        {
+        });
+    </script>
+}

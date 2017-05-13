@@ -1,0 +1,50 @@
+﻿@model LoginUser
+@section Style
+{
+    @Styles.Render("~/styles/login")
+}
+@section ScriptHeader
+{
+}
+<div id="page-container">
+    <div id="form">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div id="valid-msg">
+                @Html.ValidationMessageFor(m => m.UserName)
+                @Html.ValidationMessageFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.ValidateCode)
+            </div>
+            <ol>
+                <li>
+                    @Html.EditorFor(m => m.UserName)
+                </li>
+                <li>
+                    @Html.EditorFor(m => m.Password)
+                </li>
+                <li id="validation-code">
+                    <span>@Html.EditorFor(m => m.ValidateCode)</span><span id="validation-code-container"><img id="img-validation-code" src="" alt="点击图片更换验证码" title="点击图片更换验证码" /></span><div style="clear:both"></div>
+                </li>
+            </ol>
+            <div id="button-container">
+                <a id="submit" href=""></a>
+            </div>
+        }
+    </div>
+</div>
+@section ScriptFooter
+{
+    @Scripts.Render("~/scripts/jquery-validate")
+    <script type="text/javascript" language="javascript">
+        function resize() { $("#page-container").height($(window).height());}
+        $(function ()
+        {
+            $(window).resize(resize);
+            $("#submit").click(function () { var form = $("form"); if (form.valid()) form.submit(); return false; });
+            $("body").keydown(function () { if (event.keyCode == "13") { $("#submit").trigger("click"); return false; } });
+            $("#img-validation-code").click(function (e) { $(this).attr("src", "/Home/GetValidateCode/" + getRandom()); return false; }).trigger("click");
+            resize();
+        });
+    </script>
+}

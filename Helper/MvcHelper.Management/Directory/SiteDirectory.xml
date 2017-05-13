@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--name：          对应Area、Controller、Action的名称，不唯一-->
+<!--namecn：        用于权限管理页面生成功能选项的名称-->
+<!--id：            用于页面中菜单、标签、标签页的id，唯一-->
+<!--defaultAction： 仅限于Action，指定该Action是否为父级Controller的缺省页面-->
+<!--categoryid：    仅限于展现列表页的Action，多个Controller使用同一数据表时，区分它们的分类Id-->
+<!--title：         菜单、页面标签的显示名称-->
+<Site>
+  <Area name="" namecn="图片管理" id="PictureManage" title="图片管理">
+    <Controller name="Pictures" namecn="图片" id="Pictures" title="图片">
+      <Action defaultAction="true" name="Index" namecn="浏览" id="Index_Pictures" title="图片管理"/>
+      <Action name="Create" namecn="添加" id="Create_Pictures" title="添加照片"/>
+      <Action name="Delete"  namecn="删除" id="Delete_Pictures" title="删除照片"/>
+      <Action name="Details" namecn="详情" id="Details_Pictures" title="照片详情"/>
+      <Action name="Edit" namecn="编辑" id="Edit_Pictures" title="编辑照片"/>
+    </Controller>
+     </Area>
+    <Area name="" namecn="系统管理" id="SystemManage" title="系统管理">
+      -<Controller title="个人账户维护" id="PersonalUser" namecn="个人账户维护" name="PersonalUser">
+        <Action title="个人账户维护" id="Details_PersonalUser" namecn="个人账户维护" name="Details" defaultAction="true"/>
+        <Action title="个人信息维护" id="Edit_PersonalUser" namecn="个人信息维护" name="Edit"/>
+        <Action title="登录密码修改" id="ModifyPwd_PersonalUser" namecn="登录密码修改" name="ModifyPwd"/>
+      </Controller>
+        <Controller name="Users" namecn="用户账号管理" id="User" title="用户账号管理">
+            <Action defaultAction="true" name="Index" namecn="浏览" id="Index_User" title="员工账号管理"/>
+            <Action name="Create" namecn="添加" id="Create_User" title="添加用户账号"/>
+            <Action name="Edit" namecn="编辑" id="Edit_User" title="编辑用户账号"/>
+            <Action name="Delete" namecn="删除" id="Delete_User" title="删除用户账号"/>
+            <Action name="Details" namecn="详情" id="Details_User" title="用户账号详情"/>
+        </Controller>
+        <Controller name="Roles" namecn="角色权限管理" id="Role" title="角色权限管理">
+            <Action defaultAction="true" name="Index" namecn="浏览" id="Index_Role" title="角色权限管理"/>
+            <Action name="Create" namecn="添加" id="Create_Role" title="添加角色权限"/>
+            <Action name="Edit" namecn="编辑" id="Edit_Role" title="编辑角色权限"/>
+            <Action name="Delete" namecn="删除" id="Delete_Role" title="删除角色权限"/>
+        </Controller>
+    </Area>
+</Site>

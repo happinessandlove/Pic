@@ -1,0 +1,454 @@
+﻿<#@ template language="C#" HostSpecific="True" Debug="True" #>
+<#@ output extension="cs" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Data.Entity" #>
+<#@ assembly name="System.Data.Linq" #>
+<#@ assembly name="System.ComponentModel.DataAnnotations" #>
+<#//@ assembly name="$(ProjectDir)\bin\System.Web.Helpers.dll" #>
+<#//@ assembly name="$(ProjectDir)\bin\System.Web.Mvc.dll" #>
+<#//@ assembly name="$(ProjectDir)\bin\MvcHelper.Framework.dll" #>
+<#//@ assembly name="$(ProjectDir)\bin\MvcHelper.Validation.dll" #>
+<#@ ScaffoldingAssembly Processor="ScaffoldingAssemblyLoader" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.ComponentModel.DataAnnotations" #>
+<#//@ import namespace="System.Web.Helpers" #>
+<#//@ import namespace="System.Web.Mvc" #>
+<#@ import namespace="Microsoft.AspNet.Scaffolding.Core.Metadata" #>
+<#@ parameter type="System.String" name="ControllerName" #>
+<#@ parameter type="System.String" name="ControllerRootName" #>
+<#@ parameter type="System.String" name="Namespace" #>
+<#@ parameter type="System.String" name="AreaName" #>
+<#@ parameter type="System.String" name="ContextTypeName" #>
+<#@ parameter type="System.String" name="ModelTypeName" #>
+<#@ parameter type="System.String" name="ModelVariable" #>
+<#@ parameter type="Microsoft.AspNet.Scaffolding.Core.Metadata.ModelMetadata" name="ModelMetadata" #>
+<#@ parameter type="System.String" name="EntitySetVariable" #>
+<#@ parameter type="System.Boolean" name="UseAsync" #>
+<#@ parameter type="System.Boolean" name="IsOverpostingProtectionRequired" #>
+<#@ parameter type="System.String" name="BindAttributeIncludeText" #>
+<#@ parameter type="System.String" name ="OverpostingWarningMessage" #>
+<#@ parameter type="System.Collections.Generic.HashSet<System.String>" name="RequiredNamespaces" #>
+<#
+	var controllerName = ControllerName;
+	var controllerRootName = ControllerRootName;
+	var nameSpace = Namespace;
+	var areaName = AreaName;
+	var contextTypeName = ContextTypeName;
+	var modelTypeName = ModelTypeName;
+	var modelVariable = ModelVariable;
+	var modelMetadata = ModelMetadata;
+	var useAsync = UseAsync;
+	var isOverpostingProtectionRequired = IsOverpostingProtectionRequired;
+	var bindAttributeIncludeText = BindAttributeIncludeText;
+	var overpostingWarningMessage = OverpostingWarningMessage;
+	var requiredNamespaces = RequiredNamespaces;
+
+    var entitySetName = modelMetadata.EntitySetName;
+    var entitySetVariable = EntitySetVariable ?? (String.IsNullOrEmpty(entitySetName) ? entitySetName : (entitySetName.Substring(0, length:1).ToLowerInvariant() + entitySetName.Substring(1)));
+    var primaryKeyName = modelMetadata.PrimaryKeys[0].PropertyName;
+    var primaryKeyShortTypeName = modelMetadata.PrimaryKeys[0].ShortTypeName;
+    var primaryKeyDefaultValue = modelMetadata.PrimaryKeys[0].DefaultValue;
+    var primaryKeyType = modelMetadata.PrimaryKeys[0].TypeName;
+    var primaryKeyNullableTypeName = GetNullableTypeName(primaryKeyType, primaryKeyShortTypeName);
+    var relatedProperties = modelMetadata.RelatedEntities.ToDictionary(item => item.AssociationPropertyName);
+	var primaryKeyIsGuid = !String.IsNullOrEmpty(primaryKeyType) && String.Equals("System.Guid", primaryKeyType, StringComparison.OrdinalIgnoreCase);
+	var convertedId = primaryKeyShortTypeName=="string"?"{0}":primaryKeyShortTypeName+".Parse({0})";
+    string bindAttribute;
+    if (IsOverpostingProtectionRequired)
+    {
+        bindAttribute = String.Format("[Bind(Include = \"{0}\")] ", bindAttributeIncludeText);
+    }
+    else
+    {
+        bindAttribute = String.Empty;
+    }	
+	//name & sort & rank
+	string name="Name", sortPropertyName="xxxxx",sortDirection="Ascending";
+	PropertyMetadata rankProperty=null, datetimeProperty=null;
+	foreach(PropertyMetadata p in modelMetadata.Properties)
+	{
+		if(p.PropertyName.ToLower()==modelTypeName.ToLower()+"name") name=p.PropertyName;
+		if(p.PropertyName.ToLower()=="rank") rankProperty=p;
+		if(p.ShortTypeName=="DateTime") datetimeProperty=p;
+	}
+	if(rankProperty!=null){sortPropertyName=rankProperty.PropertyName; sortDirection="Ascending";}
+	else if(datetimeProperty!=null){sortPropertyName=datetimeProperty.PropertyName; sortDirection="Descending";}
+	//includeExpressions
+	var includeExpressions = "";
+    includeExpressions = String.Join("", relatedProperties.Values.Select(property => String.Format(".Include(s => s.{0})",  property.AssociationPropertyName)));
+#>
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Linq;
+using System.Text;
+using System.Net;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.Helpers;
+<# foreach (var namespaceName in requiredNamespaces) { #>
+using <#= namespaceName #>;
+<# } #>
+
+namespace <#= nameSpace #>
+{
+    public class <#= controllerName #> : Controller
+    {
+        private <#= contextTypeName #> db = new <#= contextTypeName #>();
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing) db.Dispose();
+            base.Dispose(disposing);
+        }
+
+        #region 列表
+        public ActionResult Index(OperationParam op)
+        {
+            #region 验证登录
+            User loginUser = AccountHelper.LoginUser;
+            if (loginUser == null) return RedirectToAction("Login", "Home", new { area = "" });
+            ViewBag.LoginUser = loginUser;
+            #endregion
+
+            #region 验证权限
+            string pageId = "Index_<#=modelTypeName#>"; //站点目录中的id属性值
+            if (!Access.Validate(pageId)) return HttpNotFound();
+            ViewBag.PageId = pageId;
+            #endregion
+
+            #region 翻页、查询、排序、显示全部、移动、删除
+            ReturnValue returnValue = new ReturnValue();
+            <#=modelTypeName#> deleteData = null;
+            switch (op.OpType)
+            {
+                case OperationType.Pager: break;
+                case OperationType.Query: break;
+                case OperationType.Sort: break;
+                case OperationType.ShowAll: break;
+                case OperationType.RankUp: break;
+                case OperationType.Delete:
+                    deleteData = db.<#=entitySetName#>.Find(<#=string.Format(convertedId,"op.OpArgument")#>);
+                    if (deleteData == null)
+                    {
+                        returnValue.Type = ReturnType.DeleteFailure;
+                        returnValue.Message = ResultMessage.DeleteFailure;
+                    }
+                    else
+                    {
+						try
+						{
+							db.<#=entitySetName#>.Remove(deleteData);
+							db.SaveChanges();
+							returnValue.Type = ReturnType.DeleteSuccess;
+							returnValue.Message = ResultMessage.DeleteSuccess;
+						}
+						catch
+						{
+                            db.Entry(deleteData).State = EntityState.Unchanged;
+							returnValue.Type = ReturnType.DeleteFailure;
+							returnValue.Message = ResultMessage.DeleteFailure;
+						}
+                    }
+                    OperationParam.Reset(ModelState);
+                    break;
+                case OperationType.Deletes:
+                    string[] ids = op.OpArgument.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+					bool success = true;
+                    foreach (string id in ids)
+                    {
+                        deleteData = db.<#=entitySetName#>.Find(<#=string.Format(convertedId,"id")#>);
+                        if (deleteData == null) continue;
+                        else db.<#=entitySetName#>.Remove(deleteData);
+						try
+						{
+							db.SaveChanges();
+						}
+						catch
+						{
+							db.Entry(deleteData).State = EntityState.Unchanged;
+							success = false;
+						}
+                    }
+                    if (success)
+                    {
+                        returnValue.Type = ReturnType.DeletesSuccess;
+                        returnValue.Message = ResultMessage.DeletesSuccess;
+                    }
+                    else
+                    {
+                        returnValue.Type = ReturnType.DeletesFailure;
+                        returnValue.Message = ResultMessage.DeletesFailure;
+                    }
+                    OperationParam.Reset(ModelState);
+                    break;
+            }
+            #endregion
+
+            IQueryable<<#=ModelTypeName#>> datas = QueryHelper.ExecuteQuery(db.<#=entitySetName#>, op.OpQueryString); //执行前台查询条件（延迟）。若有附加条件，后续添加.Where()子句
+            Pager pager = new Pager(datas.Count(), op.OpPager, null); //页码相关对象
+            ViewBag.Pager = pager;
+            if (string.IsNullOrEmpty(op.OpSortProperty)) { op.OpSortProperty = "<#=sortPropertyName#>"; op.OpSortDirection = SortDirection.<#=sortDirection#>; }//首次打开页面的初始排序依据及方向 <需修改>
+            IList<<#=ModelTypeName#>> <#=entitySetVariable#> = datas
+<# if (string.IsNullOrEmpty(includeExpressions)) { #>
+				//.Include(s=>s.) //Include所有需要的导航属性和导航集合（含多级导航），一次性查询数据库 <需修改>
+<# } else { #>
+				<#=includeExpressions#> //Include所有需要的导航属性和导航集合（含多级导航），一次性查询数据库 <需修改>
+<# } #>
+				.Sort(op.OpSortProperty, op.OpSortDirection) //排序
+				.GetPageData(pager) //选择当前页的数据
+				.ToList(); //执行查询
+            ViewBag.OperationParam = op;
+            ViewBag.ReturnValue = returnValue.ToJson();
+            return View(<#=entitySetVariable#>);
+        }
+        #endregion		
+
+        #region 详情
+        [HttpGet]
+        public ActionResult Details(<#= primaryKeyNullableTypeName #> id)
+        {
+            #region 验证登录
+            User loginUser = AccountHelper.LoginUser;
+            if (loginUser == null) return RedirectToAction("Login", "Home", new { area = "" });
+            ViewBag.LoginUser = loginUser;
+            #endregion
+
+            #region 验证权限
+            string pageId = "Details_<#=modelTypeName#>"; //站点目录中的id属性值
+            if (!Access.Validate(pageId)) return HttpNotFound();
+            ViewBag.PageId = pageId;
+            #endregion
+
+			if(id == null) return HttpNotFound();
+            <#=modelTypeName#> <#=modelVariable#> = db.<#=entitySetName#><#=includeExpressions#>.FirstOrDefault(s => s.<#= primaryKeyName #> == id); //Include所有需要的导航属性和导航集合（含多级导航），一次性查询数据库 <需修改>
+            if (<#=modelVariable#> == null) return HttpNotFound();
+            return View(<#=modelVariable#>);
+        }
+        #endregion
+
+        #region 添加
+        [HttpGet]
+        public ActionResult Create()
+        {
+            #region 验证登录
+            User loginUser = AccountHelper.LoginUser;
+            if (loginUser == null) return RedirectToAction("Login", "Home", new { area = "" });
+            ViewBag.LoginUser = loginUser;
+            #endregion
+
+            #region 验证权限
+            string pageId = "Create_<#=modelTypeName#>"; //站点目录中的id属性值
+            if (!Access.Validate(pageId)) return HttpNotFound();
+            ViewBag.PageId = pageId;
+            #endregion
+
+			#region 其余ViewBag数据绑定
+			#endregion
+
+            return View();
+        }
+
+		//防止“过多发布”攻击，启用指定绑定到特定属性的功能
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(<#= bindAttribute #><#=modelTypeName#> <#=modelVariable#>)
+        {
+            #region 验证登录
+            User loginUser = AccountHelper.LoginUser;
+            if (loginUser == null) return RedirectToAction("Login", "Home", new { area = "" });
+            ViewBag.LoginUser = loginUser;
+            #endregion
+
+            #region 验证权限
+            string pageId = "Create_<#=modelTypeName#>"; //站点目录中的id属性值
+            if (!Access.Validate(pageId)) return HttpNotFound();
+            ViewBag.PageId = pageId;
+            #endregion
+
+			#region 无论添加是否成功，页面显示所需的其余ViewBag数据绑定
+			#endregion
+
+            #region 添加
+            ReturnValue returnValue = new ReturnValue();
+            if (ModelState.IsValid)
+            {
+                #region 特殊数据验证 <不需要验证则注释或删除>
+                if (db.<#=entitySetName#>.Where(s => s.<#=name#> == <#=modelVariable#>.<#=name#>).Count() > 0)
+                {
+                    returnValue.Type = ReturnType.CreateFailure;
+                    returnValue.Message = "该xxxx已存在";
+                    ViewBag.ReturnValue = returnValue.ToJson();
+                    return View(<#=modelVariable#>);
+                }
+                #endregion
+                try
+                {
+<#if(primaryKeyIsGuid){#>
+                    <#= modelVariable #>.<#= primaryKeyName #> = Guid.NewGuid();
+<#}#>
+                    db.<#=entitySetName#>.Add(<#=modelVariable#>);
+                    db.SaveChanges();
+                    ModelState.Clear();
+                    returnValue.Type = ReturnType.CreateSuccess;
+                    returnValue.Message = ResultMessage.CreateSuccess;
+                    ViewBag.ReturnValue = returnValue.ToJson();
+                    return View();
+                }
+                catch
+                {
+                    returnValue.Type = ReturnType.CreateFailure;
+                    returnValue.Message = ResultMessage.CreateFailure;
+                    ViewBag.ReturnValue = returnValue.ToJson();
+                    return View(<#=modelVariable#>);
+                }
+            }
+            #endregion
+
+            ViewBag.ReturnValue = returnValue.ToJson();
+            return View(<#=modelVariable#>);
+        }
+        #endregion
+
+        #region 编辑
+        [HttpGet]
+        public ActionResult Edit(<#= primaryKeyNullableTypeName #> id)
+        {
+            #region 验证登录
+            User loginUser = AccountHelper.LoginUser;
+            if (loginUser == null) return RedirectToAction("Login", "Home", new { area = "" });
+            ViewBag.LoginUser = loginUser;
+            #endregion
+
+            #region 验证权限
+            string pageId = "Edit_<#=modelTypeName#>"; //站点目录中的id属性值
+            if (!Access.Validate(pageId)) return HttpNotFound();
+            ViewBag.PageId = pageId;
+            #endregion
+			
+			#region 其余ViewBag数据绑定
+			#endregion
+			
+			if(id == null) return HttpNotFound();
+            <#=modelTypeName#> <#=modelVariable#> = db.<#=entitySetName#><#=includeExpressions#>.FirstOrDefault(s => s.<#= primaryKeyName #> == id); //Include所有需要的导航属性和导航集合（含多级导航），一次性查询数据库 <需修改>
+            if (<#=modelVariable#> == null) return HttpNotFound();
+            return View(<#=modelVariable#>);
+        }
+		
+		//防止“过多发布”攻击，启用指定绑定到特定属性的功能
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(<#= bindAttribute #><#=modelTypeName#> <#=modelVariable#>)
+        {
+            #region 验证登录
+            User loginUser = AccountHelper.LoginUser;
+            if (loginUser == null) return RedirectToAction("Login", "Home", new { area = "" });
+            ViewBag.LoginUser = loginUser;
+            #endregion
+
+            #region 验证权限
+            string pageId = "Edit_<#=modelTypeName#>"; //站点目录中的id属性值
+            if (!Access.Validate(pageId)) return HttpNotFound();
+            ViewBag.PageId = pageId;
+            #endregion
+			
+			#region 无论编辑是否成功，页面显示所需的其余ViewBag数据绑定
+			#endregion
+
+            ReturnValue returnValue = new ReturnValue();
+            #region 编辑
+            if (ModelState.IsValid)
+            {
+                #region 特殊数据验证 <不需要验证则注释或删除>
+                if (db.<#=entitySetName#>.Where(s => s.<#=name#> == <#=modelVariable#>.<#=name#> && s.<#=primaryKeyName#> != <#=modelVariable#>.<#=primaryKeyName#>).Count() > 0)
+                {
+                    returnValue.Type = ReturnType.EditFailure;
+                    returnValue.Message = "该xxxx已存在";
+                    //针对需要显示导航属性的情形，重新查询数据库
+                    //<#=modelVariable#> = db.<#=entitySetName#><#=includeExpressions#>.FirstOrDefault(s => s.<#= primaryKeyName #> == <#=modelVariable#>.<#= primaryKeyName #>); //Include所有需要的导航属性和导航集合（含多级导航），一次性查询数据库 <需修改>
+                    ViewBag.ReturnValue = returnValue.ToJson();
+                    return View(<#=modelVariable#>);
+                }
+                #endregion
+                try
+                {
+                    db.Entry(<#=modelVariable#>).State = EntityState.Modified;
+                    db.SaveChanges();
+                    returnValue.Type = ReturnType.EditSuccess;
+                    returnValue.Message = ResultMessage.EditSuccess;
+                }
+                catch
+                {
+                    db.Entry(<#=modelVariable#>).State = EntityState.Unchanged;
+                    returnValue.Type = ReturnType.EditFailure;
+                    returnValue.Message = ResultMessage.EditFailure;
+                }
+            }
+            #endregion
+			
+            //针对需要显示导航属性的情形，重新查询数据库
+            //<#=modelVariable#> = db.<#=entitySetName#><#=includeExpressions#>.FirstOrDefault(s => s.<#= primaryKeyName #> == <#=modelVariable#>.<#= primaryKeyName #>); //Include所有需要的导航属性和导航集合（含多级导航），一次性查询数据库 <需修改>
+
+            ViewBag.ReturnValue = returnValue.ToJson();
+            return View(<#=modelVariable#>);
+        }
+        #endregion
+
+        #region ajax获取或验证某些数据
+		//	[HttpGet]
+		//	public JsonResult CheckXxxx(string value)
+		//	{
+		//		ReturnValue returnValue = new ReturnValue();
+		//		int count = db.<#=entitySetName#>.Where(s => s.<#=name#> == value).Count();
+		//		if (count == 0)
+		//		{
+		//			returnValue.Type = ReturnType.Success;
+		//			returnValue.Message = ResultMessage.EditSuccess;
+		//		}
+		//		else
+		//		{
+		//			returnValue.Type = ReturnType.Failure;
+		//			returnValue.Message = "该xxxx已存在";
+		//		}
+		//		return Json(returnValue, JsonRequestBehavior.AllowGet);
+		//	}
+		//
+		//	[HttpGet]
+		//	public JsonResult GetXxxx(param)
+		//	{
+		//		var data = db.xxx.Where(s => s.xxx == param);
+		//		return Json(data, JsonRequestBehavior.AllowGet);
+		//	}
+        #endregion
+	}
+}
+
+<#+
+// This function converts the primary key short type name to its nullable equivalent when possible. This is required to make
+// sure that an HTTP 400 error is thrown when the user tries to access the edit, delete, or details action with null values.
+    string GetNullableTypeName(string typeName, string shortTypeName)
+    {
+        // The exceptions are caught because if for any reason the type is user defined, then the short type name will be used.
+        // In that case the user will receive a server error if null is passed to the edit, delete, or details actions.
+        Type primaryKeyType = null;
+        try
+        {
+            primaryKeyType = Type.GetType(typeName);
+        }
+        catch
+        {
+        }
+        if (primaryKeyType != null && (primaryKeyType.IsPrimitive || IsGuid(typeName)))
+        {
+            return shortTypeName + "?";
+        }
+        return shortTypeName;
+    }
+
+    bool IsGuid(string typeName) {
+        return String.Equals("System.Guid", typeName, StringComparison.OrdinalIgnoreCase);
+    }
+#>

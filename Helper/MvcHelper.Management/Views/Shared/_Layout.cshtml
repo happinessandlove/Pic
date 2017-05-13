@@ -1,0 +1,21 @@
+﻿@{
+    string pid = ViewBag.Pid;
+    string pclass = ViewBag.Pclass;
+}
+<!DOCTYPE html>
+<html lang="zh" @(new MvcHtmlString(string.IsNullOrWhiteSpace(pid) ? "" : "id=\"p-" + pid + "\"")) @(new MvcHtmlString(string.IsNullOrWhiteSpace(pclass) ? "" : "class=\"p-" + pclass + "\""))>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,user-scalable=no">
+    <title>@(string.IsNullOrEmpty(ViewBag.Title) ? "计算机设计大赛演示系统" : ViewBag.Title)</title>
+    @Styles.Render("~/styles/site")
+    @RenderSection("Style", false)
+    @RenderSection("ScriptHeader", false)
+</head>
+<body>
+    @RenderBody()
+    @Scripts.Render("~/scripts/site")
+    @RenderSection("ScriptFooter", false)
+</body>
+</html>

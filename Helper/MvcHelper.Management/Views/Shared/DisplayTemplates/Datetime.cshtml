@@ -1,0 +1,9 @@
+﻿@if (ViewData.Model != null)
+{
+    string format;
+    if (ViewData["format"] != null) { format = ViewData["format"].ToString(); }
+    else if (ViewData.ModelMetadata.EditFormatString == null) { format = "{0:yyyy-MM-dd HH:mm:ss}"; }
+    else if (ViewData.ModelMetadata.EditFormatString == "{0:d}") { format = "{ 0:yyyy-MM-dd HH:mm:ss}"; }
+    else { format = ViewData.ModelMetadata.EditFormatString; }
+    @(string.Format(format, (DateTime)ViewData.Model))
+}

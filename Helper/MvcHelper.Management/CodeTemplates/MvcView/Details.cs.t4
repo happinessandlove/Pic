@@ -1,0 +1,80 @@
+﻿<#@ template language="C#" HostSpecific="True" #>
+<#@ output extension=".cshtml" #>
+<#@ include file="Imports.include.t4" #>
+<#
+var modelName = ViewDataTypeShortName;
+string pkName = GetPrimaryKeyName();
+IEnumerable<PropertyMetadata> properties = ModelMetadata.Properties;
+#>
+@model <#=modelName#>
+@{
+    Layout = "~/Views/Shared/_LayoutSubpage.cshtml";
+    string pageId = ViewBag.PageId;
+    PageInfo pageInfo = SiteDirectory.GetPageInfo(pageId);
+	User loginUser = ViewBag.LoginUser;
+    ViewBag.Pid = pageInfo.Id;
+    ViewBag.Pclass = pageInfo.Name;
+    ViewBag.PageId = pageId + Model.<#=pkName#>;
+}
+@section Style
+{
+    <style type="text/css">
+        .form-key { width: 140px; }
+    </style>
+}
+@section ScriptHeader
+{
+    <script type="text/javascript">
+    </script>
+}
+<div id="tools-back">
+</div>
+<div id="tools">
+    <div id="tool-items">
+        @Html.RenderRefreshToolbarItem()
+        @Html.RenderReturnToolbarItem(pageInfo)
+    </div>
+    <div id="tool-buttons">
+    </div>
+    <div class="clear-float">
+    </div>
+</div>
+<div class="form-table">
+    <table>
+        <tbody>
+<#
+foreach (PropertyMetadata property in properties) 
+{
+    if (property.Scaffold && !property.IsPrimaryKey && !property.IsForeignKey && !(property.IsAssociation  && property.IsIndependentAssociation) && !property.IsReadOnly && property.PropertyName.ToLower()!="rank") 
+	{
+#>
+			<tr>
+					<td class="form-key">@Html.DisplayNameFor(model => model.<#=property.PropertyName#>, 4)</td>
+<#
+		if(property.IsAssociation)
+		{
+#>
+				<td class="form-value">@Html.DisplayFor(model => model.<#=GetValueExpression(property)#>)</td>
+<#
+		}
+		else
+		{
+#>
+				<td class="form-value">@Html.DisplayFor(model => model.<#=property.PropertyName#>)</td>
+<#
+		}
+#>
+			</tr>
+<#}}#>
+        </tbody>
+    </table>
+</div>
+@section ScriptFooter
+{
+    <script type="text/javascript" language="javascript">
+        $(function ()
+        {
+        });
+    </script>
+}
+<#@ include file="ModelMetadataFunctions.cs.include.t4" #>

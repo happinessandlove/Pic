@@ -1,0 +1,20 @@
+﻿
+body { background-color: #1d5797; background-image: url(/Content/images/login-bg.png); background-repeat: repeat-x; background-position: left top; }
+#page-container { width: 100%; overflow: hidden; background: url(/Content/images/login.jpg) no-repeat center top; }
+#form { margin: 0 auto; width: 340px; height: 290px; margin-top: 160px; background: url(/Content/images/login-form.png) no-repeat left top; }
+#valid-msg { height: 81px; padding-left: 88px; }
+  #valid-msg span { display: block; padding-bottom: 2px; color: #e60012; font-size: 14px; }
+ol { padding-left: 88px; }
+  ol li { list-style: none; display: block; height: 28px; overflow: hidden; padding: 1px 0 17px 0; }
+  ol li { *height: 30px; *padding: 0 0 16px 0; }
+/*IE6、7*/
+.single-line { height: 26px; border: 1px solid #808993; color: #333; font-size: 14px; padding: 0px; padding-left: 5px; width: 192px; }
+#button-container { padding: 37px 0 0 170px; }
+#submit { display: block; height: 34px; width: 117px; background: url(/Content/images/button.png) no-repeat left top; }
+  #submit:hover { background-position: -120px top; }
+#ValidateCode { width: 96px; }
+#validation-code span { display: inline-block; float: left; padding-right: 10px; }
+#validation-code #validation-code-container { height: 28px; width: 86px; overflow: hidden; }
+#validation-code #validation-code-container { *padding: 1px 0; }
+/*IE6、7*/
+#img-validation-code { cursor: pointer; }

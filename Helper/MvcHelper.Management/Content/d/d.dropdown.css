@@ -1,0 +1,22 @@
+﻿/*
+    d-dropdown
+    需要设置：标题的width、height、line-height，icon的margin-top，body的top,边框
+*/
+.d-dropdown { position: relative; display: inline-block; z-index:50 }
+.d-dropdown .d-dropdown-title { display: inline-block;  cursor: pointer;  }
+.d-dropdown .d-dropdown-title-border { width:100%; }
+.d-dropdown .d-dropdown-title-text { float:left; }
+.d-dropdown .d-dropdown-icon { float: left; display: inline-block; width: 7px; height: 4px; overflow: hidden; background: url("images/d-image.png") no-repeat 0px -5px; }
+.d-dropdown .d-dropdown-icon { /*CSS3*/ -moz-transition: -moz-transform .2s ease-in 0s; -webkit-transition: -webkit-transform .2s ease-in 0s; -o-transition: -o-transform .2s ease-in 0s; transition: transform .2s ease-in 0s; }
+.d-dropdown .d-dropdown-body { position: absolute; display: none; z-index: 49; background-color: white; border: 1px solid #ddd; overflow: hidden;  }
+.d-dropdown .d-dropdown-body-border { width:100%; }
+
+.d-dropdown-hover .d-dropdown-title { background-color: white; border-left: 1px solid #ddd; border-right: 1px solid #ddd; }
+.d-dropdown-hover .d-dropdown-title { /*CSS3*/ -moz-box-shadow: 0 2px 3px #aaa; -webkit-box-shadow: 0 2px 3px #aaa; box-shadow: 0 2px 3px #aaa; }
+.d-dropdown-hover .d-dropdown-title-text { color: #e64d2f; }
+.d-dropdown-hover .d-dropdown-icon {/*CSS3*/ -moz-transform: rotate(180deg); -webkit-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); }
+.no-csstransitions.no-csstransforms .d-dropdown-hover .d-dropdown-icon { background: url("images/d-image.png") no-repeat 0px 0px; }
+.d-dropdown-hover .d-dropdown-body { display: block; /*CSS3*/ -moz-box-shadow: 0 2px 3px #aaa; -webkit-box-shadow: 0 2px 3px #aaa; box-shadow: 0 2px 3px #aaa; }
+
+
+

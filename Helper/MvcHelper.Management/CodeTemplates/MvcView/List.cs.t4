@@ -1,0 +1,148 @@
+﻿<#@ template language="C#" HostSpecific="True" #>
+<#@ output extension=".cshtml" #>
+<#@ include file="Imports.include.t4" #>
+<#
+var modelName = ViewDataTypeShortName;
+string pkName = GetPrimaryKeyName();
+IEnumerable<PropertyMetadata> properties = ModelMetadata.Properties;
+string name=null;
+foreach (PropertyMetadata property in properties) 
+{
+	if(property.PropertyName.ToLower()=="name"||(property.PropertyName.ToLower()==modelName.ToLower()+"name"))
+	name=property.PropertyName;
+}
+#>
+@model IEnumerable<<#=modelName#>>
+@{
+    Layout = "~/Views/Shared/_LayoutSubpage.cshtml";
+    string pageId = ViewBag.PageId;
+    PageInfo pageInfo = SiteDirectory.GetPageInfo(pageId);
+    PageInfo controllerPageInfo = pageInfo.Parent;
+    ViewBag.Pid = pageId;
+    ViewBag.Pclass = pageInfo.Name;
+    string actionPages = string.Join(",", controllerPageInfo.Children.Select(s => s.Name + ":'" + s.Id + "'"));
+    Dictionary<string, bool> access = Access.All;
+    Pager pager = ViewBag.Pager;
+    OperationParam operationParam = ViewBag.OperationParam;
+	User loginUser = ViewBag.LoginUser;
+}
+@section Style
+{
+    <style type="text/css">
+<#
+foreach (PropertyMetadata property in properties) {
+    if (property.Scaffold && !property.IsPrimaryKey && !property.IsForeignKey) 
+{#>
+        .col-<#= GetValueExpression(property).Replace(".","") #> { width: ; text-align: center }
+<#}}#>
+    </style>
+}
+@section ScriptHeader
+{
+    <script type="text/javascript">
+        var actionPages = {@(Html.Raw(actionPages)) };
+    </script>
+}
+<div id="tools-back">
+    <form id="operation-form" name="operation-form" method="post" action="@pageInfo.Url">
+        @Html.Hidden("OpType", operationParam.OpType)
+        @Html.Hidden("OpArgument", operationParam.OpArgument)
+        @Html.Hidden("OpPager", operationParam.OpPager)
+        @Html.Hidden("OpQueryString", operationParam.OpQueryString)
+        @Html.Hidden("OpSortProperty", operationParam.OpSortProperty)
+        @Html.Hidden("OpSortDirection", operationParam.OpSortDirection)
+    </form>
+</div>
+<div id="tools">
+    <div id="tool-items">
+        @Html.RenderRefreshToolbarItem()
+        @Html.RenderCreateToolbarItem(controllerPageInfo, access)
+        @Html.RenderDeleteToolbarItem(controllerPageInfo, access)
+        @Html.RenderQueryToolbarItem()
+    </div>
+    <div id="tool-buttons">
+    </div>
+    <div class="clear-float">
+    </div>
+</div>
+@Html.QueryFor(operationParam.OpQueryString)
+@Html.RenderPager(pager)
+<div class="list-table">
+    <table>
+        <thead>
+            <tr>
+                @Html.RenderNoColumnHeader()
+                @Html.RenderSelectAllColumnHeader(access, controllerPageInfo)
+                @Html.RenderDetailsColumnHeader(access, controllerPageInfo)
+                @Html.RenderRankUpColumnHeader(access, controllerPageInfo)
+                @Html.RenderEditColumnHeader(access, controllerPageInfo)
+                @Html.RenderDeleteColumnHeader(access, controllerPageInfo)
+<#
+foreach (PropertyMetadata property in properties) {
+    if (property.Scaffold && !property.IsPrimaryKey && !property.IsForeignKey && !(property.IsAssociation  && property.IsIndependentAssociation) && !property.IsReadOnly && property.PropertyName.ToLower()!="rank") 
+	{
+		if(property.IsAssociation)
+		{
+#>
+                @Html.SortColumnHeaderFor(model => model.<#=property.PropertyName#>, model => model.<#=GetValueExpression(property)#>)
+<#
+		}else
+		{
+#>
+				@Html.SortColumnHeaderFor(model => model.<#=property.PropertyName#>)
+<#		}}}#>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                <#=modelName#> item;
+                for (int i = 0; i < Model.Count(); i++)
+                {
+                    item = Model.ElementAt(i);
+					<tr>
+						@Html.RenderNoColumn(i, pager)
+						@Html.RenderSelectColumn(access, controllerPageInfo, item.<#=pkName#>)
+                        @Html.RenderDetailsColumn(access, controllerPageInfo, item.<#=pkName#><#=name==null?"":(", item."+name)#>)
+                        @Html.RenderRankUpColumn(access, controllerPageInfo, item.<#=pkName#>, pager.PageIndex, i)
+                        @Html.RenderEditColumn(access, controllerPageInfo, item.<#=pkName#><#=name==null?"":(", item."+name)#>)
+                        @Html.RenderDeleteColumn(access, controllerPageInfo, item.<#=pkName#>)
+<#
+foreach (PropertyMetadata property in properties) {
+    if (property.Scaffold && !property.IsPrimaryKey && !property.IsForeignKey && !(property.IsAssociation  && property.IsIndependentAssociation) && !property.IsReadOnly && property.PropertyName.ToLower()!="rank") 
+	{
+#>
+						<td class="col-<#= GetValueExpression(property).Replace(".","") #>">
+<#
+		if(property.IsAssociation)
+		{
+#>
+							@Html.DisplayFor(modelItem => item.<#= property.PropertyName #>.<#= GetRelatedModelMetadata(property).DisplayPropertyName #>)
+<#
+		}else{
+#>
+							@Html.DisplayFor(modelItem => item.<#= property.PropertyName #>)
+<#
+		}
+#>
+						</td>
+<#}}#>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+@if (Model.Count() > 0)
+{
+    @*<div class="list-note">
+    </div>*@
+}
+@section ScriptFooter
+{
+    <script type="text/javascript" language="javascript">
+        $(function ()
+        {
+        });
+    </script>
+}
+<#@ include file="ModelMetadataFunctions.cs.include.t4" #>

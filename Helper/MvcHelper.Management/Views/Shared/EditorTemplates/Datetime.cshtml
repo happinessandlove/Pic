@@ -1,0 +1,9 @@
+﻿@if (ViewData.Model == null)
+{
+    @Html.TextBox("", null, new { @class = "text-box single-line datepicker", type = "text" })
+}
+else
+{
+    string format = ViewData["format"] != null ? ViewData["format"].ToString() : ViewData.ModelMetadata.EditFormatString == "{0:d}" ? "{0:yyyy-MM-dd}" : ViewData.ModelMetadata.EditFormatString;
+    @Html.TextBox("", (DateTime)ViewData.Model, format, new { @class = "text-box single-line datepicker", type = "text" })
+}

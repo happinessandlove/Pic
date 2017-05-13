@@ -1,0 +1,50 @@
+﻿@section Style{
+    @Styles.Render("~/styles/framework")
+    <style>
+    </style>
+}
+@section scriptHeader{
+}
+<div id="header">
+    <div id="header-body">
+        <div id="header-bar">
+            <a id="btn-logout" href="/Home/LogOut" target="_self"></a>
+            <div id="user-info"><span>管理员</span><i></i></div>
+            <div class="clr"></div>
+        </div>
+        <div id="tab-bar">
+            @*<div id="menu-caption"><i></i><span>菜 单</span><a href="#" id="btn-hide-menu"><<</a><span class="clr"></span></div>*@
+            <a id="btn-close-all" href="/"></a>
+            <dl id="tab-container" class="tab-container"></dl>
+            <div class="clr"></div>
+        </div>
+    </div>
+    <div id="tool-bar">
+        <a class="tool-bar-btn" href="/">button1</a>
+        <a class="tool-bar-btn" href="/">button2</a>
+        <a class="tool-bar-btn" href="/">button3</a>
+    </div>
+</div>
+<div id="main">
+    <div id="left">
+        @Html.RenderMenu(SiteDirectory.All, Access.All)
+    </div>
+    <div id="right">
+        <div id="tabpage-container" class="tabpage-container">
+
+        </div>
+    </div>
+    <div class="clear-float">
+    </div>
+</div>
+@section scriptFooter
+{
+    @Scripts.Render("~/scripts/framework")
+    <script type="text/javascript" language="javascript">
+        var framework;
+        $(function ()
+        {
+            framework = new Framework({ tabBaseWidth: 50, initPageIdSuffix: 'University' });
+        });
+    </script>
+}

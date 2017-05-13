@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF168D2C-C1EE-41F3-A7E3-0228D412A5C5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Models</RootNamespace>
+    <AssemblyName>Models</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\MvcHelper.Management\Dll\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\MvcHelper.Management\Dll\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DbEntity.cs" />
+    <Compile Include="Enums\EnumCaptchaUsedFor.cs" />
+    <Compile Include="Enums\EnumUserStatus.cs" />
+    <Compile Include="Enums\StudentStatus.cs" />
+    <Compile Include="Enums\UserStatus.cs" />
+    <Compile Include="Migrations\201704300853196_a.cs" />
+    <Compile Include="Migrations\201704300853196_a.Designer.cs">
+      <DependentUpon>201704300853196_a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704300859550_b.cs" />
+    <Compile Include="Migrations\201704300859550_b.Designer.cs">
+      <DependentUpon>201704300859550_b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704300901362_c.cs" />
+    <Compile Include="Migrations\201704300901362_c.Designer.cs">
+      <DependentUpon>201704300901362_c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705010846554_d.cs" />
+    <Compile Include="Migrations\201705010846554_d.Designer.cs">
+      <DependentUpon>201705010846554_d.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705111530410_e.cs" />
+    <Compile Include="Migrations\201705111530410_e.Designer.cs">
+      <DependentUpon>201705111530410_e.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705121513356_g.cs" />
+    <Compile Include="Migrations\201705121513356_g.Designer.cs">
+      <DependentUpon>201705121513356_g.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Label.cs" />
+    <Compile Include="Models\Picture.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\Type.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Volunteer.cs" />
+    <Compile Include="Models\VolunteerToken.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MvcHelper.Framework\MvcHelper.Framework.csproj">
+      <Project>{a9aa2304-7335-45fe-87ea-770815d27582}</Project>
+      <Name>MvcHelper.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcHelper.Validation\MvcHelper.Validation.csproj">
+      <Project>{eeba87ce-28f6-4d0b-8c3e-bdfe91eaa410}</Project>
+      <Name>MvcHelper.Validation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Orp.Helpers\PictureClassification.Helpers.csproj">
+      <Project>{39812F8F-36CF-4203-95C0-6D4469495829}</Project>
+      <Name>PictureClassification.Helpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201704300853196_a.resx">
+      <DependentUpon>201704300853196_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704300859550_b.resx">
+      <DependentUpon>201704300859550_b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704300901362_c.resx">
+      <DependentUpon>201704300901362_c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705010846554_d.resx">
+      <DependentUpon>201705010846554_d.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111530410_e.resx">
+      <DependentUpon>201705111530410_e.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705121513356_g.resx">
+      <DependentUpon>201705121513356_g.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

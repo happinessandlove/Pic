@@ -1,0 +1,83 @@
+﻿@model User
+@{
+    Layout = "~/Views/Shared/_LayoutSubpage.cshtml";
+    string pageId = ViewBag.PageId;
+    PageInfo pageInfo = SiteDirectory.GetPageInfo(pageId);
+    PageInfo controllerPageInfo = pageInfo.Parent;
+    Dictionary<string, bool> access = Access.All;
+    ViewBag.Pid = pageInfo.Id;
+    ViewBag.Pclass = pageInfo.Name;
+    ViewBag.PageId = pageId;
+}@section Style
+{
+    <style type="text/css">
+        .form-key { width: 140px; }
+    </style>
+}@section ScriptHeader
+{
+}
+<div id="tools-back">
+</div>
+<div id="tools">
+    <div id="tool-items">
+        @Html.RenderRefreshToolbarItem()
+        @Html.RenderCustomToolbarItem("Edit_PersonalUser",controllerPageInfo,access)
+        @Html.RenderCustomToolbarItem("ModifyPwd_PersonalUser",controllerPageInfo,access)
+
+    </div>
+    <div id="tool-buttons">
+    </div>
+    <div class="clear-float">
+    </div>
+</div>
+<div class="form-table">
+    <table>
+        <tbody>
+			<tr>
+				<td class="form-key">@Html.DisplayNameFor(model => model.RoleId)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.Role.Name)</td>
+			</tr>
+			<tr>
+				<td class="form-key">@Html.DisplayNameFor(model => model.LoginName)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.LoginName)</td>
+			</tr>
+			<tr>
+				<td class="form-key">@Html.DisplayNameFor(model => model.Name)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.Name)</td>
+			</tr>
+            <tr>
+                <td class="form-key">@Html.DisplayNameFor(model => model.Status)</td>
+                <td class="form-value">@Html.DisplayFor(model => model.Status)</td>
+            </tr>
+			<tr>
+				<td class="form-key">@Html.DisplayNameFor(model => model.LivingAddress)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.LivingAddress)</td>
+			</tr>
+			<tr>
+				<td class="form-key">@Html.DisplayNameFor(model => model.TelephoneNumber)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.TelephoneNumber)</td>
+			</tr>
+			<tr>
+				<td class="form-key">@Html.DisplayNameFor(model => model.IDCardNumber)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.IDCardNumber)</td>
+			</tr>
+			<tr>
+				<td class="form-key">@Html.DisplayNameFor(model => model.CreateTime)</td>
+				<td class="form-value">@string.Format("{0:yyyy-MM-dd}", Model.CreateTime)</td>
+			</tr>
+			<tr>
+				<td class="form-key">@Html.DisplayNameFor(model => model.Introduction)</td>
+				<td class="form-value">@Html.DisplayFor(model => model.Introduction)</td>
+			</tr>
+        </tbody>
+    </table>
+</div>
+@section ScriptFooter
+{
+    <script type="text/javascript" language="javascript">
+        $(function ()
+        {
+        });
+    </script>
+}
+

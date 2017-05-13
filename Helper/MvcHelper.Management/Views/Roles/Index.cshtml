@@ -1,0 +1,112 @@
+﻿@model IEnumerable<Role>
+@{
+    Layout = "~/Views/Shared/_LayoutSubpage.cshtml";
+    string pageId = ViewBag.PageId;
+    PageInfo pageInfo = SiteDirectory.GetPageInfo(pageId);
+    PageInfo controllerPageInfo = pageInfo.Parent;
+    ViewBag.Pid = pageId;
+    ViewBag.Pclass = pageInfo.Name;
+    string actionPages = string.Join(",", controllerPageInfo.Children.Select(s => s.Name + ":'" + s.Id + "'"));
+    Dictionary<string, bool> access = Access.All;
+    Pager pager = ViewBag.Pager;
+    OperationParam operationParam = ViewBag.OperationParam;
+}@section Style
+{
+    <style type="text/css">
+        .col-Name { width:; text-align: center; }
+        .col-MenuId { width:; text-align: center; }
+        .col-Remarks { width:; text-align: center; }
+    </style>
+}@section ScriptHeader
+{
+    <script type="text/javascript">
+        var actionPages = {@(Html.Raw(actionPages)) };
+    </script>
+}
+<div id="tools-back">
+    <form id="operation-form" name="operation-form" method="post" action="@pageInfo.Url">
+        @Html.Hidden("OpType", operationParam.OpType)
+        @Html.Hidden("OpArgument", operationParam.OpArgument)
+        @Html.Hidden("OpPager", operationParam.OpPager)
+        @Html.Hidden("OpQueryString", operationParam.OpQueryString)
+        @Html.Hidden("OpSortProperty", operationParam.OpSortProperty)
+        @Html.Hidden("OpSortDirection", operationParam.OpSortDirection)
+    </form>
+</div>
+<div id="tools">
+    <div id="tool-items">
+        @Html.RenderRefreshToolbarItem()
+        @Html.RenderCreateToolbarItem(controllerPageInfo, access)
+        @Html.RenderDeleteToolbarItem(controllerPageInfo, access)
+        @Html.RenderQueryToolbarItem()
+    </div>
+    <div id="tool-buttons">
+    </div>
+    <div class="clear-float">
+    </div>
+</div>
+@Html.QueryFor(operationParam.OpQueryString)
+@Html.RenderPager(pager)
+<div class="list-table">
+    <table>
+        <thead>
+            <tr>
+                @Html.RenderNoColumnHeader()
+                @Html.RenderSelectAllColumnHeader(access, controllerPageInfo)
+                @Html.SortColumnHeaderFor(model => model.Name)
+                @Html.SortColumnHeaderFor(model => model.Remarks)
+                @Html.RenderDetailsColumnHeader(access, controllerPageInfo)
+                @Html.RenderRankUpColumnHeader(access, controllerPageInfo)
+                @Html.RenderEditColumnHeader(access, controllerPageInfo)
+                @Html.RenderDeleteColumnHeader(access, controllerPageInfo)
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                Role item;
+                for (int i = 0; i < Model.Count(); i++)
+                {
+                    item = Model.ElementAt(i);
+                    <tr>
+                        @Html.RenderNoColumn(i, pager)
+                        @Html.RenderSelectColumn(access, controllerPageInfo, item.Id)
+                        <td class="col-Name">
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td class="col-Remarks">
+                            @Html.DisplayFor(modelItem => item.Remarks)
+                        </td>
+                        @Html.RenderDetailsColumn(access, controllerPageInfo, item.Id, item.Name)
+                        @Html.RenderRankUpColumn(access, controllerPageInfo, item.Id, pager.PageIndex, i)
+                        @Html.RenderEditColumn(access, controllerPageInfo, item.Id, item.Name)
+                        @if (Access.Validate("Delete_Role"))
+                        {
+                            if (item.Name == "管理员")
+                            {
+                                <td class="col-delete"></td>
+                            }
+                            else
+                            {
+                                <td class="col-delete"><a href="/" itemid="@item.Id" class="button-delete" tabid="Index_Role" title="删除"></a></td>
+                            }
+                        }
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+@if (Model.Count() > 0)
+{
+    @*<div class="list-note">
+        </div>*@
+}
+@section ScriptFooter
+{
+    <script type="text/javascript" language="javascript">
+        $(function ()
+        {
+        });
+    </script>
+}
+
