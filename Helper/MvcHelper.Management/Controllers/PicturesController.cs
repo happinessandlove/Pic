@@ -323,7 +323,7 @@ namespace MvcHelper.Management.Controllers
             if (!Access.Validate(pageId)) return HttpNotFound();
             ViewBag.PageId = pageId;
             #endregion
-            return View();
+            //return View();
         }
         #endregion
 
