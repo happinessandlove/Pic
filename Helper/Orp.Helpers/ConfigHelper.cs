@@ -29,8 +29,8 @@ namespace System
         public static string Host = "210.29.65.96";
 #endif
         public static int SocketPort = 6000;
-        public static string BaiduPushApiKey = "";
-        public static string BaiduPushSecretKey = "";
+        public static string BaiduPushApiKey = "GIwgK30FoBARL9wq1MAmjxh6";
+        public static string BaiduPushSecretKey = "DURjRpfFAhKtvOCOoCGwjl1OGbNYZEfT";
 
         public static string WxAppId = "";
         public static string WxAppSecret = "";

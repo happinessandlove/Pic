@@ -4,10 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Threading;
-using System.Web;
 using System.Web.Http;
 
 namespace Api.Controllers
@@ -135,67 +132,69 @@ namespace Api.Controllers
         [Route("Register/SendCaptcha")]
         public IHttpActionResult PostSendRegisterCaptcha(GetCaptcha model)
         {
-            //验证数据
-            if(model==null)
-                return BadRequest("请输入手机号码");
-            if(!ModelState.IsValid)
-                return BadRequest(ModelState.Values.First(s=>s.Errors.Count>0).Errors[0].ErrorMessage);
+            try
+            {
+                //验证数据
+                if (model == null)
+                    return BadRequest("请输入手机号码");
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState.Values.First(s => s.Errors.Count > 0).Errors[0].ErrorMessage);
 
-            Volunteer volunteer = db.Volunteers.FirstOrDefault(s=>s.MobileNumber==model.MobileNumber&&s.Status!=EnumUserStatus.注销);
+                Volunteer volunteer = db.Volunteers.FirstOrDefault(s => s.MobileNumber == model.MobileNumber && s.Status != EnumUserStatus.注销);
 
-            //生成验证码
-            string code = new Random().Next(100000, 999999).ToString();
+                //生成验证码
+                string code = new Random().Next(100000, 999999).ToString();
 #if DEBUG
-            code = "666666";
-            Thread.Sleep(2000);
+                code = "666666";
+                Thread.Sleep(2000);
 #endif
-            //存储手机号码、验证码等信息到数据库
-            //1.新手机号码
-            if(volunteer==null)
-            {
-                DateTime now = DateTime.Now;
-                volunteer = new Volunteer
+                //存储手机号码、验证码等信息到数据库
+                //1.新手机号码
+                if (volunteer == null)
                 {
-                    Id = Guid.NewGuid(),
-                    MobileNumber = model.MobileNumber,
-                    SmsCaptcha = code,
-                    SmsCaptchaUsedFor = EnumCaptchaUsedFor.志愿者注册,
-                    SmsCaptchaExpiredTime = now.AddMinutes(30),
-                    RegisterTime = now
-                };
-                try
-                {
-                    db.Volunteers.Add(volunteer);
-                    db.SaveChanges();
-                }
-                catch(Exception ex)
-                {
-                    return BadRequest("操作发生错误");
-                }
+                    DateTime now = DateTime.Now;
+                    volunteer = new Volunteer
+                    {
+                        Id = Guid.NewGuid(),
+                        MobileNumber = model.MobileNumber,
+                        SmsCaptcha = code,
+                        SmsCaptchaUsedFor = EnumCaptchaUsedFor.志愿者注册,
+                        SmsCaptchaExpiredTime = now.AddMinutes(30),
+                        RegisterTime = now
+                    };
+                    try
+                    {
+                        db.Volunteers.Add(volunteer);
+                        db.SaveChanges();
+                    }
+                    catch (Exception ex)
+                    {
+                        return BadRequest("操作发生错误");
+                    }
 
-            }
-            //2.已存在的手机号码
-            else
-            {
-                //排除已经提交手机号码但未进行验证的情况
-                if (volunteer.Status == EnumUserStatus.注册未验证手机)
-                    return BadRequest("该手机号码已注册");
-                volunteer.SmsCaptcha = code;
-                volunteer.SmsCaptchaUsedFor = EnumCaptchaUsedFor.志愿者注册;
-                DateTime now = DateTime.Now;
-                volunteer.SmsCaptchaExpiredTime = now.AddMinutes(30);
-                db.Entry(volunteer).State = EntityState.Modified;
-                try
-                {
-                    db.SaveChanges();
                 }
-                catch(Exception ex)
+                //2.已存在的手机号码
+                else
                 {
-                    db.Entry(volunteer).State = EntityState.Unchanged;
-                    return BadRequest("操作发生错误");
-                }
+                    //排除已经提交手机号码但未进行验证的情况
+                    if (volunteer.Status == EnumUserStatus.注册未验证手机)
+                        return BadRequest("该手机号码已注册");
+                    volunteer.SmsCaptcha = code;
+                    volunteer.SmsCaptchaUsedFor = EnumCaptchaUsedFor.志愿者注册;
+                    DateTime now = DateTime.Now;
+                    volunteer.SmsCaptchaExpiredTime = now.AddMinutes(30);
+                    db.Entry(volunteer).State = EntityState.Modified;
+                    try
+                    {
+                        db.SaveChanges();
+                    }
+                    catch (Exception ex)
+                    {
+                        db.Entry(volunteer).State = EntityState.Unchanged;
+                        return BadRequest("操作发生错误");
+                    }
 
-            }
+                }
 
 #if !DEBUG
              if (!Ali.SendWorkerRegisterSms(code, model.MobileNumber))
@@ -204,7 +203,13 @@ namespace Api.Controllers
             }
 #endif
 
-            return Ok();
+
+                return Ok();
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
         }
 
 
