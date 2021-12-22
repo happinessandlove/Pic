@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-22T09:09:57.475Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="LY0ZXSZihmrxcovE_d0_" version="16.0.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-22T09:36:48.515Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="bgGBsqJ5WUB1JAYL_4o5" version="16.0.0" type="github">
   <diagram id="YCTGJR02snR9csBezVZd" name="Page-1">
     <mxGraphModel dx="2500" dy="3272" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -128,7 +128,7 @@
           <mxGeometry x="430" y="820" width="240" height="50" as="geometry" />
         </mxCell>
         <mxCell id="7-aJ9GHmP8vsTWekd-Si-56" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;Device Subcomponent&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;div style=&quot;height: 2px&quot;&gt;&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" parent="1" vertex="1">
-          <mxGeometry x="288" y="710" width="240" height="50" as="geometry" />
+          <mxGeometry x="290" y="730" width="240" height="50" as="geometry" />
         </mxCell>
         <mxCell id="7-aJ9GHmP8vsTWekd-Si-57" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;Memory Subcomponent&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;div style=&quot;height: 2px&quot;&gt;&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" parent="1" vertex="1">
           <mxGeometry x="851" y="930" width="240" height="50" as="geometry" />
@@ -146,7 +146,7 @@
           <mxGeometry x="150" y="1040" width="240" height="50" as="geometry" />
         </mxCell>
         <mxCell id="7-aJ9GHmP8vsTWekd-Si-62" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;System Subcomponent&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;div style=&quot;height: 2px&quot;&gt;&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" parent="1" vertex="1">
-          <mxGeometry x="568" y="710" width="240" height="50" as="geometry" />
+          <mxGeometry x="570" y="730" width="240" height="50" as="geometry" />
         </mxCell>
         <mxCell id="7-aJ9GHmP8vsTWekd-Si-63" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;Thread Subcomponent&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;div style=&quot;height: 2px&quot;&gt;&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" parent="1" vertex="1">
           <mxGeometry x="852" y="1150" width="240" height="50" as="geometry" />
@@ -901,7 +901,7 @@
         </mxCell>
         <mxCell id="_OpLvnGNROC4zTUCR6nX-27" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="7-aJ9GHmP8vsTWekd-Si-56" target="7-aJ9GHmP8vsTWekd-Si-90">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="530" y="990" as="sourcePoint" />
+            <mxPoint x="410" y="790" as="sourcePoint" />
             <mxPoint x="690" y="990" as="targetPoint" />
             <Array as="points">
               <mxPoint x="410" y="900" />
