@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-02-08T08:48:26.098Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="uo556uZnA6ibd7YFy0n1" version="16.2.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-02-08T08:49:52.001Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="d7Fww-qD6vyHjXr0okNj" version="16.2.6" type="github">
   <diagram id="GGYCWKbRazjykh9vFGDS" name="Page-1">
     <mxGraphModel dx="1341" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -7,7 +7,7 @@
         <mxCell id="G4B4auYITuGabKD5fMpG-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="80" y="40" width="240" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="G4B4auYITuGabKD5fMpG-2" value="定义“必要的”可靠性" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="G4B4auYITuGabKD5fMpG-2" value="定义“必要的”可靠性" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="115" y="46.25" width="170" height="47.5" as="geometry" />
         </mxCell>
         <mxCell id="G4B4auYITuGabKD5fMpG-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -53,16 +53,16 @@
             <mxPoint x="520" y="340" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="G4B4auYITuGabKD5fMpG-16" value="开发运行剖面" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="G4B4auYITuGabKD5fMpG-16" value="开发运行剖面" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="190" y="146.25" width="170" height="47.5" as="geometry" />
         </mxCell>
-        <mxCell id="G4B4auYITuGabKD5fMpG-17" value="准备测试" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="G4B4auYITuGabKD5fMpG-17" value="准备测试" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="270" y="246.25" width="170" height="47.5" as="geometry" />
         </mxCell>
-        <mxCell id="G4B4auYITuGabKD5fMpG-18" value="执行测试" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="G4B4auYITuGabKD5fMpG-18" value="执行测试" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="370" y="382.5" width="170" height="47.5" as="geometry" />
         </mxCell>
-        <mxCell id="G4B4auYITuGabKD5fMpG-19" value="应用失效数据得&lt;br&gt;到结论" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="G4B4auYITuGabKD5fMpG-19" value="应用失效数据得&lt;br&gt;到结论" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="460" y="350" width="170" height="47.5" as="geometry" />
         </mxCell>
         <mxCell id="G4B4auYITuGabKD5fMpG-59" value="" style="shape=table;html=1;whiteSpace=wrap;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=18;fontStyle=1" vertex="1" parent="1">
@@ -71,17 +71,17 @@
         <mxCell id="G4B4auYITuGabKD5fMpG-60" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=18;" vertex="1" parent="G4B4auYITuGabKD5fMpG-59">
           <mxGeometry width="560" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="G4B4auYITuGabKD5fMpG-61" value="&lt;b&gt;需求与体系结构&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;fontSize=18;" vertex="1" parent="G4B4auYITuGabKD5fMpG-60">
+        <mxCell id="G4B4auYITuGabKD5fMpG-61" value="需求与体系结构" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;fontSize=18;fontStyle=0" vertex="1" parent="G4B4auYITuGabKD5fMpG-60">
           <mxGeometry width="187" height="60" as="geometry">
             <mxRectangle width="187" height="60" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="G4B4auYITuGabKD5fMpG-62" value="&lt;b&gt;设计与实现&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;fontSize=18;" vertex="1" parent="G4B4auYITuGabKD5fMpG-60">
+        <mxCell id="G4B4auYITuGabKD5fMpG-62" value="&lt;span&gt;设计与实现&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;fontSize=18;fontStyle=0" vertex="1" parent="G4B4auYITuGabKD5fMpG-60">
           <mxGeometry x="187" width="186" height="60" as="geometry">
             <mxRectangle width="186" height="60" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="G4B4auYITuGabKD5fMpG-63" value="&lt;b&gt;测试&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;fontSize=18;" vertex="1" parent="G4B4auYITuGabKD5fMpG-60">
+        <mxCell id="G4B4auYITuGabKD5fMpG-63" value="&lt;span style=&quot;font-weight: normal&quot;&gt;测试&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;fontSize=18;fontStyle=1" vertex="1" parent="G4B4auYITuGabKD5fMpG-60">
           <mxGeometry x="373" width="187" height="60" as="geometry">
             <mxRectangle width="187" height="60" as="alternateBounds" />
           </mxGeometry>
