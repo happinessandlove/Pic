@@ -1,1 +1,49 @@
-<mxfile host="app.diagrams.net" modified="2022-02-08T08:16:09.552Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.1 Safari/605.1.15" version="16.5.3" etag="bChE6S1-CMKwOa38iOy-" type="github"><diagram id="VE8LqSAeV3PcInHN2edf">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-02-09T08:26:44.914Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="pME4HMmnGdH98cS90WP9" version="16.5.3" type="github">
+  <diagram id="VE8LqSAeV3PcInHN2edf" name="Page-1">
+    <mxGraphModel dx="487" dy="581" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t2M6kh1j7S63XPuGjww4-1" value="软件可靠性目标、参数、指标的确定" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="90" y="200" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="t2M6kh1j7S63XPuGjww4-2" value="软件可靠性验证" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="530" y="340" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="t2M6kh1j7S63XPuGjww4-3" value="软件可靠性设计" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="310" y="340" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="t2M6kh1j7S63XPuGjww4-4" value="软件可靠性需求的可行性分析" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="90" y="340" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="t2M6kh1j7S63XPuGjww4-5" value="软件交付与使用" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="750" y="200" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="t2M6kh1j7S63XPuGjww4-6" value="软件可靠性测试与评价" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="530" y="200" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="t2M6kh1j7S63XPuGjww4-7" value="软件可靠性分析与早期预计" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="310" y="200" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="t2M6kh1j7S63XPuGjww4-112" value="软件需求分析" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="60" y="480" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="t2M6kh1j7S63XPuGjww4-113" value="软件交付与使用" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="720" y="480" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="t2M6kh1j7S63XPuGjww4-114" value="软件测试" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="500" y="480" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="t2M6kh1j7S63XPuGjww4-115" value="软件设计与实现" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="280" y="480" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="t2M6kh1j7S63XPuGjww4-116" value="软&amp;nbsp; 件&amp;nbsp; 工&amp;nbsp; 程" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="60" y="600" width="880" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="t2M6kh1j7S63XPuGjww4-117" value="软&amp;nbsp; 件&amp;nbsp; 可&amp;nbsp; 靠&amp;nbsp; 性&amp;nbsp; 工&amp;nbsp; 程" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="60" y="80" width="880" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
