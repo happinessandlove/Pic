@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-29T16:02:02.359Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.4 Safari/605.1.15" etag="QlTEPktjCF4PR8TqY8Ux" version="18.1.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-29T16:02:42.504Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.4 Safari/605.1.15" etag="lih8xqQZnwfphka-04s_" version="18.1.3" type="github">
   <diagram id="imvIGspGnV9eovQ4TVUC" name="Page-1">
     <mxGraphModel dx="946" dy="645" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -12,7 +12,7 @@
         </mxCell>
         <mxCell id="uthg2pFocaPEbMSlvV8R-10" value="缓存获取不到则从服务端获取" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=default;" vertex="1" connectable="0" parent="uthg2pFocaPEbMSlvV8R-7">
           <mxGeometry x="0.1652" y="3" relative="1" as="geometry">
-            <mxPoint y="-16" as="offset" />
+            <mxPoint x="-14" y="-16" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="uthg2pFocaPEbMSlvV8R-8" value="从本地缓存获取" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=default;" edge="1" parent="1" source="uthg2pFocaPEbMSlvV8R-2" target="uthg2pFocaPEbMSlvV8R-3">
