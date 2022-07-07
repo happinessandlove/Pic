@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-07-07T07:57:25.571Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="13MFxvZvd3E-El6x4zm1" version="20.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-07T08:02:02.392Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="jRK0xoL8lzz9EXyJL_D3" version="20.0.4" type="github">
   <diagram name="Page-1" id="bfe91b75-5d2c-26a0-9c1d-138518896778">
     <mxGraphModel dx="2522" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -41,6 +41,14 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="uh_vPkytdd0RdtmT2PiO-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#000000;" edge="1" parent="1" source="uh_vPkytdd0RdtmT2PiO-10" target="uh_vPkytdd0RdtmT2PiO-30">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="395" y="680" />
+              <mxPoint x="728" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="uh_vPkytdd0RdtmT2PiO-10" value="&lt;font color=&quot;#000000&quot;&gt;交换机&lt;/font&gt;" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#6881B3;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.switch;" vertex="1" parent="1">
           <mxGeometry x="345" y="600" width="100" height="30" as="geometry" />
         </mxCell>
@@ -50,7 +58,7 @@
         <mxCell id="uh_vPkytdd0RdtmT2PiO-14" value="NAS" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#B3B3B3;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam2.nas;" vertex="1" parent="1">
           <mxGeometry x="360" y="760" width="70" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="uh_vPkytdd0RdtmT2PiO-17" value="Raspberry K3S 集群" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/fruit-136/64/Fruit_iconfree_Filled_Outline_raspberry-healthy-organic-food-fruit_icon-128.png;fontColor=#000000;fillColor=#B3B3B3;" vertex="1" parent="1">
+        <mxCell id="uh_vPkytdd0RdtmT2PiO-17" value="HomeAssistant" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/fruit-136/64/Fruit_iconfree_Filled_Outline_raspberry-healthy-organic-food-fruit_icon-128.png;fontColor=#000000;fillColor=#B3B3B3;" vertex="1" parent="1">
           <mxGeometry x="520" y="758" width="78" height="78" as="geometry" />
         </mxCell>
         <mxCell id="uh_vPkytdd0RdtmT2PiO-22" value="" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#6881B3;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.mobile;" vertex="1" parent="1">
@@ -70,6 +78,24 @@
         </mxCell>
         <mxCell id="uh_vPkytdd0RdtmT2PiO-29" value="" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#6881B3;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.laptop;" vertex="1" parent="1">
           <mxGeometry x="-140.82" y="830" width="63.64" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="uh_vPkytdd0RdtmT2PiO-40" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="690" y="754" width="130" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="uh_vPkytdd0RdtmT2PiO-37" value="" style="group" vertex="1" connectable="0" parent="uh_vPkytdd0RdtmT2PiO-40">
+          <mxGeometry width="118.91472868217053" height="112.82142857142857" as="geometry" />
+        </mxCell>
+        <mxCell id="uh_vPkytdd0RdtmT2PiO-30" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/fruit-136/64/Fruit_iconfree_Filled_Outline_raspberry-healthy-organic-food-fruit_icon-128.png;fontColor=#000000;fillColor=#B3B3B3;" vertex="1" parent="uh_vPkytdd0RdtmT2PiO-37">
+          <mxGeometry width="75.2124636627907" height="75.2124636627907" as="geometry" />
+        </mxCell>
+        <mxCell id="uh_vPkytdd0RdtmT2PiO-32" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/fruit-136/64/Fruit_iconfree_Filled_Outline_raspberry-healthy-organic-food-fruit_icon-128.png;fontColor=#000000;fillColor=#B3B3B3;" vertex="1" parent="uh_vPkytdd0RdtmT2PiO-37">
+          <mxGeometry x="20.15503875968992" y="20.250000000000004" width="75.2124636627907" height="75.2124636627907" as="geometry" />
+        </mxCell>
+        <mxCell id="uh_vPkytdd0RdtmT2PiO-31" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/fruit-136/64/Fruit_iconfree_Filled_Outline_raspberry-healthy-organic-food-fruit_icon-128.png;fontColor=#000000;fillColor=#B3B3B3;" vertex="1" parent="uh_vPkytdd0RdtmT2PiO-37">
+          <mxGeometry x="40.31007751937984" y="37.60714285714286" width="75.2124636627907" height="75.2124636627907" as="geometry" />
+        </mxCell>
+        <mxCell id="uh_vPkytdd0RdtmT2PiO-39" value="&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Raspberry K3S 集群&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;" vertex="1" parent="uh_vPkytdd0RdtmT2PiO-40">
+          <mxGeometry x="9.069767441860463" y="106.07142857142857" width="120.93023255813954" height="28.928571428571427" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
