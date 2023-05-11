@@ -1,9 +1,24 @@
-<mxfile host="app.diagrams.net" modified="2023-05-11T02:50:01.479Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" version="21.2.2" etag="RMh5wwY-a0nI-tdd_Ugr" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-11T03:06:18.584Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="Qk2Q7sjtkFyKtiL0BemU" version="21.2.2" type="github">
   <diagram name="Page-1" id="8mtBHamg71PUbX-FDrAm">
-    <mxGraphModel>
+    <mxGraphModel dx="2074" dy="1124" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="oDEAuxL1qXgXwy5DULMc-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="oDEAuxL1qXgXwy5DULMc-1" target="oDEAuxL1qXgXwy5DULMc-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oDEAuxL1qXgXwy5DULMc-1" value="交易对手要素（包括非形式化的备注信息）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="230" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oDEAuxL1qXgXwy5DULMc-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="oDEAuxL1qXgXwy5DULMc-2" target="oDEAuxL1qXgXwy5DULMc-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oDEAuxL1qXgXwy5DULMc-2" value="逻辑筛选条件" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="294" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oDEAuxL1qXgXwy5DULMc-3" value="满足条件的债券和质押数量" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="524" y="230" width="96" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
