@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-07-20T02:41:56.599Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="KfKfWiyEmGZvkmvzJdMD" version="21.6.3" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-20T02:49:07.123Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="wxnKu3oQ_updQKdF0-e2" version="21.6.3" type="github">
   <diagram name="Page-1" id="3td5JxkXfDrMrJ53wT5U">
-    <mxGraphModel dx="2261" dy="764" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2022" dy="637" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -22,8 +22,24 @@
         <mxCell id="Y6MA_SlT_S250u1S7EXK-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Y6MA_SlT_S250u1S7EXK-6" target="Y6MA_SlT_S250u1S7EXK-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="Y6MA_SlT_S250u1S7EXK-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Y6MA_SlT_S250u1S7EXK-6" target="Y6MA_SlT_S250u1S7EXK-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y6MA_SlT_S250u1S7EXK-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="Y6MA_SlT_S250u1S7EXK-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="340" as="sourcePoint" />
+            <mxPoint x="496" y="460" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="430" y="400" />
+              <mxPoint x="487" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="Y6MA_SlT_S250u1S7EXK-6" value="未到期" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="390" y="260" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Y6MA_SlT_S250u1S7EXK-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Y6MA_SlT_S250u1S7EXK-7" target="Y6MA_SlT_S250u1S7EXK-12">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Y6MA_SlT_S250u1S7EXK-7" value="到期未兑付" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="680" y="260" width="80" height="80" as="geometry" />
@@ -33,6 +49,24 @@
         </mxCell>
         <mxCell id="Y6MA_SlT_S250u1S7EXK-11" value="定时任务每天自动更新兑付日为当天的存款" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="510" y="260" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Y6MA_SlT_S250u1S7EXK-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Y6MA_SlT_S250u1S7EXK-12" target="Y6MA_SlT_S250u1S7EXK-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y6MA_SlT_S250u1S7EXK-12" value="正常到期兑付" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="960" y="260" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Y6MA_SlT_S250u1S7EXK-14" value="定时任务执行，具体逻辑见文档SQL" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="790" y="255" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Y6MA_SlT_S250u1S7EXK-15" value="结束" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="285" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Y6MA_SlT_S250u1S7EXK-17" value="提前支取兑付" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="334" y="460" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Y6MA_SlT_S250u1S7EXK-18" value="部分提前&lt;br&gt;支付兑付" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="447" y="460" width="80" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
