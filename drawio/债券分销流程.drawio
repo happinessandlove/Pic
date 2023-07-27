@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-07-27T09:00:39.471Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="KcwJNBbITBPqzbJD5hGE" version="21.6.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-27T09:02:49.458Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="IS00I1fHCsEMa5jrq-Rv" version="21.6.5" type="github">
   <diagram name="Page-1" id="9l_n-vJ5dFMjZLFDEs7Z">
-    <mxGraphModel dx="4018" dy="2803" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1891" dy="1714" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -202,7 +202,7 @@
         <mxCell id="M6cpoT_YFVFPnxx10Tcq-80" value="组合关联方承销的证券，必须上市买入" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-66">
           <mxGeometry x="390" y="80" width="100" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-82" value="1. 交易员可以手动进行截标，也可以延迟截标，延迟截标后基金经理可以修改原有投标信息，其他经理像投也可以继续投&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;2.交易员投标上报后需要线下处理投标信息，包括用印、发送邮件等" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-66">
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-82" value="1. 交易员可以手动进行截标，也可以延迟截标，延迟截标后基金经理可以修改原有投标信息，其他经理想投也可以继续投&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;2.交易员投标上报后需要线下处理投标信息，包括用印、发送邮件等" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-66">
           <mxGeometry x="563.5" y="75" width="100" height="70" as="geometry" />
         </mxCell>
         <mxCell id="M6cpoT_YFVFPnxx10Tcq-86" value="如经理不确认，则系统定时自动确认" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-66">
