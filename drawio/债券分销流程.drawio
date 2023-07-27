@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-07-27T08:48:38.900Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="hQTa6z4FNYxqRkEK_7d0" version="21.6.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-27T09:00:39.471Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="KcwJNBbITBPqzbJD5hGE" version="21.6.5" type="github">
   <diagram name="Page-1" id="9l_n-vJ5dFMjZLFDEs7Z">
-    <mxGraphModel dx="1691" dy="1612" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4018" dy="2803" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -80,7 +80,7 @@
           <mxGeometry x="-130" y="350" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="M6cpoT_YFVFPnxx10Tcq-64" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="1270" y="-125" width="1355" height="865" as="geometry" />
+          <mxGeometry x="1269" y="-125" width="1413.1799999999998" height="865" as="geometry" />
         </mxCell>
         <mxCell id="M6cpoT_YFVFPnxx10Tcq-24" value="缴款确认（运营）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-64">
           <mxGeometry x="250" y="220" width="120" height="60" as="geometry" />
@@ -91,116 +91,104 @@
         <mxCell id="M6cpoT_YFVFPnxx10Tcq-26" value="存在基金账户交割方式为缴款" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-64">
           <mxGeometry x="40" y="210" width="230" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-44" value="" style="group;fillColor=#d5e8d4;strokeColor=#82b366;fillStyle=auto;" vertex="1" connectable="0" parent="M6cpoT_YFVFPnxx10Tcq-64">
-          <mxGeometry x="430" width="925" height="360" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-9" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-44">
-          <mxGeometry y="170" width="154.9" height="160" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-11" value="归档" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-44">
-          <mxGeometry x="154.01913875598086" y="300" width="106.2200956937799" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-12" value="交割方式为上市" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-44">
-          <mxGeometry x="40.492564102564096" y="145" width="115.68666666666665" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-13" value="交割方式为缴款" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-44">
-          <mxGeometry x="40.49025641025641" y="330" width="127.68794871794871" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-14" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-44">
-          <mxGeometry x="154.9043062200957" width="132.77511961722487" height="245" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-10" value="投资界面显示：&lt;br&gt;上市买入" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-44">
-          <mxGeometry x="168.1818181818182" y="10" width="106.2200956937799" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-15" value="风控/运营界面显示：&lt;br&gt;归档" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-44">
-          <mxGeometry x="168.1818181818182" y="175" width="106.2200956937799" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-16" value="交易界面显示：&lt;br&gt;上市买入" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-44">
-          <mxGeometry x="168.1818181818182" y="90" width="106.2200956937799" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-17" value="录入要素（交易）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-44">
-          <mxGeometry x="331.93779904306217" y="90" width="106.2200956937799" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="M6cpoT_YFVFPnxx10Tcq-44" source="M6cpoT_YFVFPnxx10Tcq-16" target="M6cpoT_YFVFPnxx10Tcq-17">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-19" value="归档" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-44">
-          <mxGeometry x="818.77990430622" y="90" width="106.2200956937799" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="M6cpoT_YFVFPnxx10Tcq-44" source="M6cpoT_YFVFPnxx10Tcq-20" target="M6cpoT_YFVFPnxx10Tcq-19">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-20" value="现券指令下达（投资）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-44">
-          <mxGeometry x="508.97129186602865" y="90" width="132.77511961722487" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="M6cpoT_YFVFPnxx10Tcq-44" source="M6cpoT_YFVFPnxx10Tcq-17" target="M6cpoT_YFVFPnxx10Tcq-20">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-23" value="指令状态为交易完成" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-44">
-          <mxGeometry x="659.4497607655502" y="95" width="123.92344497607654" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-46" value="" style="group;fillColor=#d5e8d4;strokeColor=#82b366;fillStyle=auto;" vertex="1" connectable="0" parent="M6cpoT_YFVFPnxx10Tcq-64">
-          <mxGeometry x="430" y="505" width="925" height="360" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-47" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-46">
-          <mxGeometry y="170" width="154.9" height="160" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-48" value="归档" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-46">
-          <mxGeometry x="154.01913875598086" y="300" width="106.2200956937799" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-49" value="交割方式为上市" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-46">
-          <mxGeometry x="40.492564102564096" y="145" width="115.68666666666665" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-50" value="交割方式为缴款" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-46">
-          <mxGeometry x="40.49025641025641" y="330" width="127.68794871794871" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-51" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-46">
-          <mxGeometry x="154.9043062200957" width="132.77511961722487" height="245" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-52" value="投资界面显示：&lt;br&gt;上市买入" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-46">
-          <mxGeometry x="168.1818181818182" y="10" width="106.2200956937799" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-53" value="风控/运营界面显示：&lt;br&gt;归档" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-46">
-          <mxGeometry x="168.1818181818182" y="175" width="106.2200956937799" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-54" value="交易界面显示：&lt;br&gt;上市买入" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-46">
-          <mxGeometry x="168.1818181818182" y="90" width="106.2200956937799" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-55" value="录入要素（交易）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-46">
-          <mxGeometry x="331.93779904306217" y="90" width="106.2200956937799" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="M6cpoT_YFVFPnxx10Tcq-46" source="M6cpoT_YFVFPnxx10Tcq-54" target="M6cpoT_YFVFPnxx10Tcq-55">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-57" value="归档" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-46">
-          <mxGeometry x="818.77990430622" y="90" width="106.2200956937799" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="M6cpoT_YFVFPnxx10Tcq-46" source="M6cpoT_YFVFPnxx10Tcq-59" target="M6cpoT_YFVFPnxx10Tcq-57">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-59" value="现券指令下达（投资）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-46">
-          <mxGeometry x="508.97129186602865" y="90" width="132.77511961722487" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="M6cpoT_YFVFPnxx10Tcq-46" source="M6cpoT_YFVFPnxx10Tcq-55" target="M6cpoT_YFVFPnxx10Tcq-59">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-61" value="指令状态为交易完成" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-46">
-          <mxGeometry x="659.4497607655502" y="95" width="123.92344497607654" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="M6cpoT_YFVFPnxx10Tcq-62" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;" edge="1" parent="M6cpoT_YFVFPnxx10Tcq-64" source="M6cpoT_YFVFPnxx10Tcq-24" target="M6cpoT_YFVFPnxx10Tcq-9">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="480" y="385" as="sourcePoint" />
             <mxPoint x="530" y="335" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-63" value="不存在基金账户交割方式为缴款" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-64">
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-63" value="交割方式全部为上市" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-64">
           <mxGeometry x="30" y="775" width="230" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-65" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="M6cpoT_YFVFPnxx10Tcq-64" target="M6cpoT_YFVFPnxx10Tcq-47">
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-65" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=2;" edge="1" parent="M6cpoT_YFVFPnxx10Tcq-64">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="250" y="755" as="sourcePoint" />
-            <mxPoint x="420" y="755" as="targetPoint" />
+            <mxPoint x="250" y="755" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-9" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-64">
+          <mxGeometry x="430" y="170" width="154.9" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-11" value="归档" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-64">
+          <mxGeometry x="584.0191387559809" y="300" width="106.2200956937799" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-12" value="交割方式为上市" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-64">
+          <mxGeometry x="470.4925641025641" y="145" width="115.68666666666665" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-13" value="交割方式为缴款" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-64">
+          <mxGeometry x="470.4902564102564" y="330" width="127.68794871794871" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-104" value="" style="group;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" connectable="0" parent="M6cpoT_YFVFPnxx10Tcq-64">
+          <mxGeometry x="586.1832535885165" y="45" width="694.5867464114832" height="245" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-14" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-104">
+          <mxGeometry width="116.98564593301435" height="245" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-10" value="投资界面显示：&lt;br&gt;上市买入" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-104">
+          <mxGeometry x="11.698564593301512" y="10" width="93.58851674641147" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-15" value="风控/运营界面显示：&lt;br&gt;归档" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=default;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-104">
+          <mxGeometry x="11.698564593301512" y="175" width="93.58851674641147" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-16" value="交易界面显示：&lt;br&gt;上市买入" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-104">
+          <mxGeometry x="11.698564593301512" y="90" width="93.58851674641147" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-17" value="录入要素（交易）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-104">
+          <mxGeometry x="181.00086124401912" y="90" width="93.58851674641147" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="M6cpoT_YFVFPnxx10Tcq-104" source="M6cpoT_YFVFPnxx10Tcq-16" target="M6cpoT_YFVFPnxx10Tcq-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-19" value="归档" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-104">
+          <mxGeometry x="600.9982296650718" y="90" width="93.58851674641147" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="M6cpoT_YFVFPnxx10Tcq-104" source="M6cpoT_YFVFPnxx10Tcq-20" target="M6cpoT_YFVFPnxx10Tcq-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-20" value="现券指令下达（投资）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-104">
+          <mxGeometry x="341.00172248803824" y="90" width="116.98564593301435" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="M6cpoT_YFVFPnxx10Tcq-104" source="M6cpoT_YFVFPnxx10Tcq-17" target="M6cpoT_YFVFPnxx10Tcq-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-23" value="指令状态为交易完成" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-104">
+          <mxGeometry x="470.9967464114833" y="90" width="119" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-128" value="" style="group;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" connectable="0" parent="M6cpoT_YFVFPnxx10Tcq-64">
+          <mxGeometry x="250.00325358851637" y="635" width="694.5867464114832" height="245" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-129" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-128">
+          <mxGeometry width="116.98564593301435" height="245" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-130" value="投资界面显示：&lt;br&gt;上市买入" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-128">
+          <mxGeometry x="11.698564593301512" y="10" width="93.58851674641147" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-131" value="风控/运营界面显示：&lt;br&gt;归档" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=default;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-128">
+          <mxGeometry x="11.698564593301512" y="175" width="93.58851674641147" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-132" value="交易界面显示：&lt;br&gt;上市买入" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-128">
+          <mxGeometry x="11.698564593301512" y="90" width="93.58851674641147" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-133" value="录入要素（交易）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-128">
+          <mxGeometry x="181.00086124401912" y="90" width="93.58851674641147" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-134" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="M6cpoT_YFVFPnxx10Tcq-128" source="M6cpoT_YFVFPnxx10Tcq-132" target="M6cpoT_YFVFPnxx10Tcq-133">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-135" value="归档" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-128">
+          <mxGeometry x="600.9982296650718" y="90" width="93.58851674641147" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-136" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="M6cpoT_YFVFPnxx10Tcq-128" source="M6cpoT_YFVFPnxx10Tcq-137" target="M6cpoT_YFVFPnxx10Tcq-135">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-137" value="现券指令下达（投资）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-128">
+          <mxGeometry x="341.00172248803824" y="90" width="116.98564593301435" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-138" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="M6cpoT_YFVFPnxx10Tcq-128" source="M6cpoT_YFVFPnxx10Tcq-133" target="M6cpoT_YFVFPnxx10Tcq-137">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-139" value="指令状态为交易完成" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-128">
+          <mxGeometry x="470.9967464114833" y="90" width="119" height="30" as="geometry" />
         </mxCell>
         <mxCell id="M6cpoT_YFVFPnxx10Tcq-66" value="流程节点说明" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-161" y="874" width="2780" height="200" as="geometry" />
