@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-07-27T08:32:17.277Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="_9Lqb1OjUImlw45HIgM8" version="21.6.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-27T08:35:42.557Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="eJB3ZyeF61aWfAuM846z" version="21.6.5" type="github">
   <diagram name="Page-1" id="9l_n-vJ5dFMjZLFDEs7Z">
     <mxGraphModel dx="3267" dy="2418" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -52,6 +52,12 @@
         <mxCell id="hEPiWNOAB4XM48eltgoP-16" value="投标" style="ellipse;whiteSpace=wrap;html=1;" parent="hEPiWNOAB4XM48eltgoP-17" vertex="1">
           <mxGeometry x="143.46875" y="46" width="62.0625" height="50" as="geometry" />
         </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-79" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="hEPiWNOAB4XM48eltgoP-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="101" y="544" as="sourcePoint" />
+            <mxPoint x="101" y="-56" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="hEPiWNOAB4XM48eltgoP-18" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;rotation=-90;" parent="1" vertex="1">
           <mxGeometry x="828.75" y="71.25" width="41.38" height="720" as="geometry" />
         </mxCell>
@@ -63,24 +69,6 @@
         </mxCell>
         <mxCell id="M6cpoT_YFVFPnxx10Tcq-1" value="发行债券信息收集&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-130" y="350" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-3" value="如经理不确认，则系统定时自动确认" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
-          <mxGeometry x="780" y="260" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-4" value="系统自动同步/研究手动录入" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
-          <mxGeometry x="-130" y="260" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-5" value="1. 交易员可以手动进行截标，也可以延迟截标，延迟截标后基金经理可以修改原有投标信息，其他经理像投也可以继续投&lt;br&gt;2.交易员投标上报后需要线下处理投标信息，包括用印、发送邮件等" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
-          <mxGeometry x="420" y="140" width="120" height="200" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-6" value="一般为定时任务自动进行冻结资金，也可以手动冻，只有交割方式为缴款的才需要自动冻结" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
-          <mxGeometry x="990" y="220" width="120" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-7" value="债券可能会多市场发行，所以需要选择市场" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
-          <mxGeometry x="60" y="250" width="120" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-8" value="组合关联方承销的证券，必须上市买入" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
-          <mxGeometry x="230" y="180" width="50" height="160" as="geometry" />
         </mxCell>
         <mxCell id="M6cpoT_YFVFPnxx10Tcq-64" value="" style="group" vertex="1" connectable="0" parent="1">
           <mxGeometry x="1270" y="-125" width="1355" height="865" as="geometry" />
@@ -208,29 +196,59 @@
         <mxCell id="M6cpoT_YFVFPnxx10Tcq-66" value="流程节点说明" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-150" y="750" width="2780" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-68" value="&lt;h1&gt;Heading&lt;/h1&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="530" y="350" width="190" height="120" as="geometry" />
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-76" value="系统自动同步/研究手动录入" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-66">
+          <mxGeometry x="30" y="65" width="100" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-69" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="600" y="390" width="60" height="30" as="geometry" />
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-78" value="债券可能会多市场发行，所以需要选择市场" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-66">
+          <mxGeometry x="220" y="75" width="100" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-70" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="600" y="390" width="60" height="30" as="geometry" />
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-80" value="组合关联方承销的证券，必须上市买入" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-66">
+          <mxGeometry x="390" y="80" width="100" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-71" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="600" y="390" width="60" height="30" as="geometry" />
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-82" value="1. 交易员可以手动进行截标，也可以延迟截标，延迟截标后基金经理可以修改原有投标信息，其他经理像投也可以继续投&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;2.交易员投标上报后需要线下处理投标信息，包括用印、发送邮件等" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-66">
+          <mxGeometry x="563.5" y="75" width="100" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-72" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="600" y="390" width="60" height="30" as="geometry" />
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-86" value="如经理不确认，则系统定时自动确认" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-66">
+          <mxGeometry x="950" y="75" width="100" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-73" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="600" y="390" width="60" height="30" as="geometry" />
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-88" value="一般为定时任务自动进行冻结资金，也可以手动冻，只有交割方式为缴款的才需要自动冻结" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-66">
+          <mxGeometry x="1140" y="75" width="100" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-74" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="600" y="390" width="60" height="30" as="geometry" />
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-77" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="20" y="950" as="sourcePoint" />
+            <mxPoint x="20" y="350" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-75" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="600" y="390" width="60" height="30" as="geometry" />
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-81" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="950" as="sourcePoint" />
+            <mxPoint x="390" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-83" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="570" y="950" as="sourcePoint" />
+            <mxPoint x="570" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-84" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="750" y="950" as="sourcePoint" />
+            <mxPoint x="750" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-85" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="940" y="950" as="sourcePoint" />
+            <mxPoint x="940" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-87" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1120" y="950" as="sourcePoint" />
+            <mxPoint x="1120" y="350" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
