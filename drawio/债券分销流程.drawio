@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-07-27T07:49:34.984Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="GCsCGhUhAr6v8qqJ8FEa" version="21.6.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-27T07:53:54.483Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="w26oJ-1kI6byJPfOxovA" version="21.6.5" type="github">
   <diagram name="Page-1" id="9l_n-vJ5dFMjZLFDEs7Z">
     <mxGraphModel dx="3267" dy="1315" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -79,14 +79,17 @@
         <mxCell id="M6cpoT_YFVFPnxx10Tcq-4" value="系统自动同步/研究手动录入" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
           <mxGeometry x="-130" y="260" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="M6cpoT_YFVFPnxx10Tcq-5" value="交易员投标上报后需要线下处理投标信息，包括用印、发送邮件等" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
-          <mxGeometry x="420" y="230" width="120" height="110" as="geometry" />
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-5" value="1. 交易员可以手动进行截标，也可以延迟截标，延迟截标后基金经理可以修改原有投标信息，其他经理像投也可以继续投&lt;br&gt;2.交易员投标上报后需要线下处理投标信息，包括用印、发送邮件等" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
+          <mxGeometry x="420" y="140" width="120" height="200" as="geometry" />
         </mxCell>
         <mxCell id="M6cpoT_YFVFPnxx10Tcq-6" value="一般为定时任务自动进行冻结资金，也可以手动冻，只有交割方式为缴款的才需要自动冻结" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
           <mxGeometry x="990" y="220" width="120" height="120" as="geometry" />
         </mxCell>
         <mxCell id="M6cpoT_YFVFPnxx10Tcq-7" value="债券可能会多市场发行，所以需要选择市场" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
           <mxGeometry x="60" y="250" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-8" value="组合关联方承销的证券，必须上市买入" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
+          <mxGeometry x="230" y="250" width="120" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
