@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-07-27T08:29:47.061Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="BUEqtraG3QTu9sfPhV8C" version="21.6.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-27T08:32:17.277Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="_9Lqb1OjUImlw45HIgM8" version="21.6.5" type="github">
   <diagram name="Page-1" id="9l_n-vJ5dFMjZLFDEs7Z">
     <mxGraphModel dx="3267" dy="2418" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -204,6 +204,33 @@
             <mxPoint x="250" y="755" as="sourcePoint" />
             <mxPoint x="420" y="755" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-66" value="流程节点说明" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-150" y="750" width="2780" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-68" value="&lt;h1&gt;Heading&lt;/h1&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="350" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-69" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="390" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-70" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="390" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-71" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="390" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-72" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="390" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-73" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="390" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-74" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="390" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-75" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="390" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
