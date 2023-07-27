@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-07-27T07:53:54.483Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="w26oJ-1kI6byJPfOxovA" version="21.6.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-27T08:04:23.102Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="VkJuQqE6rh6qjZzm5Dfa" version="21.6.5" type="github">
   <diagram name="Page-1" id="9l_n-vJ5dFMjZLFDEs7Z">
     <mxGraphModel dx="3267" dy="1315" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -49,9 +49,6 @@
         <mxCell id="hEPiWNOAB4XM48eltgoP-10" value="缴款确认（运营）" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1320" y="350" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="hEPiWNOAB4XM48eltgoP-11" value="归档" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1680" y="350" width="120" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="hEPiWNOAB4XM48eltgoP-17" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="109" y="406" width="331" height="212.5" as="geometry" />
         </mxCell>
@@ -90,6 +87,30 @@
         </mxCell>
         <mxCell id="M6cpoT_YFVFPnxx10Tcq-8" value="组合关联方承销的证券，必须上市买入" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
           <mxGeometry x="230" y="250" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-9" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="300" width="100" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-11" value="归档" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1540" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-12" value="交割方式为上市" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1410" y="265" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-13" value="交割方式为缴款" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1410" y="460" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-14" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1540" y="130" width="150" height="245" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-10" value="投资界面显示：&lt;br&gt;上市买入" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1555" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-15" value="风控/运营界面显示：&lt;br&gt;归档" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1555" y="305" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="M6cpoT_YFVFPnxx10Tcq-16" value="交易界面显示：&lt;br&gt;上市买入" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1555" y="220" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
