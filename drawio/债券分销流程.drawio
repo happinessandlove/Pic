@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-08-03T07:12:47.999Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="LR3xgEnV7xHXkv4jaLIK" version="21.6.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-08-03T07:13:56.685Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="-SyZDe87-yN9JmMZ6T6I" version="21.6.5" type="github">
   <diagram name="Page-1" id="9l_n-vJ5dFMjZLFDEs7Z">
     <mxGraphModel dx="2901" dy="2287" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -213,6 +213,15 @@
         </mxCell>
         <mxCell id="UTl3HBKWlpifJFTSDE8p-1" value="1. 有些债券需要交易填缴款日期" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-66">
           <mxGeometry x="761" y="35" width="129" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UTl3HBKWlpifJFTSDE8p-2" value="1. 需要做基金的分销审核和流程的分销审核提交" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="M6cpoT_YFVFPnxx10Tcq-66">
+          <mxGeometry x="1301" y="75" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UTl3HBKWlpifJFTSDE8p-3" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="M6cpoT_YFVFPnxx10Tcq-66">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1511" y="200" as="sourcePoint" />
+            <mxPoint x="1511" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="M6cpoT_YFVFPnxx10Tcq-77" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
