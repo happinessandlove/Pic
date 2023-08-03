@@ -1,26 +1,44 @@
-<mxfile host="app.diagrams.net" modified="2023-08-03T06:13:48.114Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="ISrUZJF0DAi95_NREdcH" version="21.6.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-08-03T06:16:07.171Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="txNB-HnGLLyPjgto_o0o" version="21.6.5" type="github">
   <diagram name="Page-1" id="KQo3LpQoSCAmQK8x_zan">
     <mxGraphModel dx="2074" dy="1118" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="OVZpxNfvhv6Q5evw8gzK-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="OVZpxNfvhv6Q5evw8gzK-1" target="OVZpxNfvhv6Q5evw8gzK-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="OVZpxNfvhv6Q5evw8gzK-1" value="发行起始日&lt;br&gt;（申购日）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="100" y="240" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="OVZpxNfvhv6Q5evw8gzK-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="OVZpxNfvhv6Q5evw8gzK-2" target="OVZpxNfvhv6Q5evw8gzK-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="OVZpxNfvhv6Q5evw8gzK-2" value="发行截止日" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="290" y="240" width="120" height="60" as="geometry" />
+          <mxGeometry x="300" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OVZpxNfvhv6Q5evw8gzK-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="OVZpxNfvhv6Q5evw8gzK-3" target="OVZpxNfvhv6Q5evw8gzK-4">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OVZpxNfvhv6Q5evw8gzK-3" value="截标时间" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="470" y="240" width="120" height="60" as="geometry" />
+          <mxGeometry x="500" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OVZpxNfvhv6Q5evw8gzK-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="OVZpxNfvhv6Q5evw8gzK-4" target="OVZpxNfvhv6Q5evw8gzK-5">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OVZpxNfvhv6Q5evw8gzK-4" value="缴款日期" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="640" y="240" width="120" height="60" as="geometry" />
+          <mxGeometry x="690" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OVZpxNfvhv6Q5evw8gzK-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="OVZpxNfvhv6Q5evw8gzK-5" target="OVZpxNfvhv6Q5evw8gzK-6">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OVZpxNfvhv6Q5evw8gzK-5" value="上市日期" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="827" y="240" width="120" height="60" as="geometry" />
+          <mxGeometry x="890" y="240" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="OVZpxNfvhv6Q5evw8gzK-6" value="到期日期" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1000" y="240" width="120" height="60" as="geometry" />
+          <mxGeometry x="1080" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OVZpxNfvhv6Q5evw8gzK-12" value="Horizontal Container" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="470" width="1230" height="200" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
