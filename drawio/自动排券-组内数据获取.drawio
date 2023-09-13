@@ -1,31 +1,103 @@
-<mxfile host="app.diagrams.net" modified="2023-09-12T06:14:21.701Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="Qotz22VtYccc-xdY3nGv" version="21.6.3" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-13T01:58:57.238Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="RmOKqLBBnJLb77A1RSdu" version="21.6.6" type="github">
   <diagram name="Page-1" id="cuxniRh0S-XcieH1EGRX">
-    <mxGraphModel dx="972" dy="511" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1185" dy="639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="pzeU2sRxU3IxJTgZdXs2-1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="260" y="70" width="190" height="190" as="geometry" />
+        <mxCell id="pzeU2sRxU3IxJTgZdXs2-1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF3333;" parent="1" vertex="1">
+          <mxGeometry x="30" y="40" width="190" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="pzeU2sRxU3IxJTgZdXs2-2" value="分组内获取的债券" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="270" y="145" width="60" height="30" as="geometry" />
+        <mxCell id="pzeU2sRxU3IxJTgZdXs2-2" value="利率分组内获取的债券" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="40" y="115" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="pzeU2sRxU3IxJTgZdXs2-7" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="344" y="80" width="70" height="70" as="geometry" />
+        <mxCell id="pzeU2sRxU3IxJTgZdXs2-7" value="" style="group;fillColor=none;" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="113" y="48" width="70" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="pzeU2sRxU3IxJTgZdXs2-3" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="pzeU2sRxU3IxJTgZdXs2-7">
+        <mxCell id="pzeU2sRxU3IxJTgZdXs2-3" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#CC0000;" parent="pzeU2sRxU3IxJTgZdXs2-7" vertex="1">
           <mxGeometry width="70" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="pzeU2sRxU3IxJTgZdXs2-4" value="最近交易过的债券" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="pzeU2sRxU3IxJTgZdXs2-7">
+        <mxCell id="pzeU2sRxU3IxJTgZdXs2-4" value="最近交易过的债券" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="pzeU2sRxU3IxJTgZdXs2-7" vertex="1">
           <mxGeometry x="5" y="20" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="pzeU2sRxU3IxJTgZdXs2-8" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="324" y="170" width="90" height="90" as="geometry" />
+        <mxCell id="pzeU2sRxU3IxJTgZdXs2-8" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="94" y="137" width="90" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="pzeU2sRxU3IxJTgZdXs2-5" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="pzeU2sRxU3IxJTgZdXs2-8">
+        <mxCell id="pzeU2sRxU3IxJTgZdXs2-5" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF0000;" parent="pzeU2sRxU3IxJTgZdXs2-8" vertex="1">
           <mxGeometry width="90" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="pzeU2sRxU3IxJTgZdXs2-6" value="与最近交易债券主体相同的债券" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="pzeU2sRxU3IxJTgZdXs2-8">
+        <mxCell id="pzeU2sRxU3IxJTgZdXs2-6" value="与最近交易债券主体相同的债券" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="pzeU2sRxU3IxJTgZdXs2-8" vertex="1">
+          <mxGeometry x="14" y="30" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF9933;" vertex="1" parent="1">
+          <mxGeometry x="290" y="40" width="190" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-2" value="CD分组内获取的债券" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="300" y="115" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-3" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="374" y="47" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-4" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#CC6600;" vertex="1" parent="r5-Ut91ZBRecWBddgbR_-3">
+          <mxGeometry width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-5" value="最近交易过的债券" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="r5-Ut91ZBRecWBddgbR_-3">
+          <mxGeometry x="5" y="20" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-6" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="354" y="137" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-7" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF8000;" vertex="1" parent="r5-Ut91ZBRecWBddgbR_-6">
+          <mxGeometry width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-8" value="与最近交易债券主体相同的债券" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="r5-Ut91ZBRecWBddgbR_-6">
+          <mxGeometry x="14" y="30" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-9" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000099;" vertex="1" parent="1">
+          <mxGeometry x="520" y="47" width="190" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-10" value="信用1分组内获取的债券" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="122" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-11" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="604" y="54" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-12" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#CCCC00;" vertex="1" parent="r5-Ut91ZBRecWBddgbR_-11">
+          <mxGeometry width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-13" value="最近交易过的债券" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="r5-Ut91ZBRecWBddgbR_-11">
+          <mxGeometry x="5" y="20" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-14" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="584" y="144" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-15" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFF00;" vertex="1" parent="r5-Ut91ZBRecWBddgbR_-14">
+          <mxGeometry width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-16" value="与最近交易债券主体相同的债券" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="r5-Ut91ZBRecWBddgbR_-14">
+          <mxGeometry x="14" y="30" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-17" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#0000CC;" vertex="1" parent="1">
+          <mxGeometry x="780" y="54" width="190" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-18" value="信用2分组内获取的债券" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="790" y="129" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-19" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="864" y="61" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-20" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFF66;" vertex="1" parent="r5-Ut91ZBRecWBddgbR_-19">
+          <mxGeometry width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-21" value="最近交易过的债券" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="r5-Ut91ZBRecWBddgbR_-19">
+          <mxGeometry x="5" y="20" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-22" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="844" y="151" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-23" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFF99;" vertex="1" parent="r5-Ut91ZBRecWBddgbR_-22">
+          <mxGeometry width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="r5-Ut91ZBRecWBddgbR_-24" value="与最近交易债券主体相同的债券" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="r5-Ut91ZBRecWBddgbR_-22">
           <mxGeometry x="14" y="30" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
