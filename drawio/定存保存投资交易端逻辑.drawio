@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-10-09T06:47:30.160Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="M1Apx7o-_-J8HbngoXOq" version="21.7.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-09T07:13:29.664Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="yV6KaEb-oplOJjJauU83" version="21.7.4" type="github">
   <diagram name="第 1 页" id="16wm2Vw1MgmUl_EgG7UV">
-    <mxGraphModel dx="2074" dy="1118" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2555" dy="932" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -22,8 +22,59 @@
         <mxCell id="ZYbfEcVgSGn3_CFw40zo-4" value="保存存款信息" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="700" y="390" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="ZYbfEcVgSGn3_CFw40zo-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZYbfEcVgSGn3_CFw40zo-6" target="ZYbfEcVgSGn3_CFw40zo-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="ZYbfEcVgSGn3_CFw40zo-6" value="创建审核项" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="890" y="390" width="120" height="60" as="geometry" />
+          <mxGeometry x="888" y="390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYbfEcVgSGn3_CFw40zo-8" value="计算风控指标" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1098" y="390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYbfEcVgSGn3_CFw40zo-10" value="保存" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="405" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYbfEcVgSGn3_CFw40zo-11" value="提交" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="490" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYbfEcVgSGn3_CFw40zo-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZYbfEcVgSGn3_CFw40zo-12" target="ZYbfEcVgSGn3_CFw40zo-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYbfEcVgSGn3_CFw40zo-12" value="判断该基金存款业务是否可投&lt;br&gt;T_RISK_SWITCH*" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="490" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYbfEcVgSGn3_CFw40zo-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZYbfEcVgSGn3_CFw40zo-14" target="ZYbfEcVgSGn3_CFw40zo-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYbfEcVgSGn3_CFw40zo-14" value="判断该基金此银行是否可存入&lt;br&gt;t_deposit_banklimit" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="490" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYbfEcVgSGn3_CFw40zo-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZYbfEcVgSGn3_CFw40zo-15" target="ZYbfEcVgSGn3_CFw40zo-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYbfEcVgSGn3_CFw40zo-15" value="保存审核项信息" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="702" y="491" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYbfEcVgSGn3_CFw40zo-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZYbfEcVgSGn3_CFw40zo-16" target="ZYbfEcVgSGn3_CFw40zo-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYbfEcVgSGn3_CFw40zo-16" value="保存流程日志" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="491" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYbfEcVgSGn3_CFw40zo-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZYbfEcVgSGn3_CFw40zo-17" target="ZYbfEcVgSGn3_CFw40zo-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYbfEcVgSGn3_CFw40zo-17" value="提取下一步名称并创建审核项" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1092" y="491" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYbfEcVgSGn3_CFw40zo-18" value="创建任务消息" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1312" y="491" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYbfEcVgSGn3_CFw40zo-19" value="作废" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="600" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYbfEcVgSGn3_CFw40zo-20" value="保存流程日志" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="590" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
