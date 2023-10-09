@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-09T06:21:23.810Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="74hexMSYmlGMq4R44Ns_" version="21.7.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-09T06:47:30.160Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="M1Apx7o-_-J8HbngoXOq" version="21.7.4" type="github">
   <diagram name="第 1 页" id="16wm2Vw1MgmUl_EgG7UV">
     <mxGraphModel dx="2074" dy="1118" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -16,8 +16,14 @@
         <mxCell id="ZYbfEcVgSGn3_CFw40zo-2" value="判断该基金此银行是否可存入&lt;br&gt;t_deposit_banklimit" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="130" y="390" width="170" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="ZYbfEcVgSGn3_CFw40zo-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZYbfEcVgSGn3_CFw40zo-4" target="ZYbfEcVgSGn3_CFw40zo-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="ZYbfEcVgSGn3_CFw40zo-4" value="保存存款信息" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="700" y="390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYbfEcVgSGn3_CFw40zo-6" value="创建审核项" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="890" y="390" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
