@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-21T02:10:05.490Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="kpA55ViBScqMbnF9KVEr" version="21.7.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-21T02:29:06.737Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="KRteByThP-p3H2gw2FBP" version="21.7.4" type="github">
   <diagram name="第 1 页" id="x_bTeJKKa33n8SwNwRoZ">
     <mxGraphModel dx="2555" dy="932" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -29,11 +29,20 @@
         <mxCell id="mna81Xxy5MV_5b3Kb8om-7" value="询价任务分量" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="-160" y="410" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mna81Xxy5MV_5b3Kb8om-8" value="交易对手" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="580" y="410" width="120" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="mna81Xxy5MV_5b3Kb8om-10" value="初始数据" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-250" y="380" width="1060" height="130" as="geometry" />
+          <mxGeometry x="-330" y="300" width="1330" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="mna81Xxy5MV_5b3Kb8om-27" value="（基金：单笔分配金额最小值：单笔分配金额最大值：回购期限最小值：回购期限最大值：询价金额：优先级）" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="mna81Xxy5MV_5b3Kb8om-10">
+          <mxGeometry x="270" y="200" width="600" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mna81Xxy5MV_5b3Kb8om-8" value="交易对手" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="mna81Xxy5MV_5b3Kb8om-10">
+          <mxGeometry x="1010" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mna81Xxy5MV_5b3Kb8om-26" value="（交易对手：利率：回购期限：金额：指定基金）" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="mna81Xxy5MV_5b3Kb8om-10">
+          <mxGeometry x="930" y="100" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mna81Xxy5MV_5b3Kb8om-29" value="（询价任务ID：实际最小占款天数：实际最大占款天数：询价金额最小值：询价金额最大值：回购期限最小值：回购期限最大值：询价金额最大剩余量）" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-160" y="569" width="820" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
