@@ -1,9 +1,40 @@
-<mxfile host="app.diagrams.net" modified="2023-11-21T02:00:53.652Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" version="21.7.4" etag="NlHN44W5Rp45lfnqsQJG" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-21T02:10:05.490Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="kpA55ViBScqMbnF9KVEr" version="21.7.4" type="github">
   <diagram name="第 1 页" id="x_bTeJKKa33n8SwNwRoZ">
-    <mxGraphModel>
+    <mxGraphModel dx="2555" dy="932" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="mna81Xxy5MV_5b3Kb8om-2" value="OD=询价交易对手实际占款天数&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="240" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mna81Xxy5MV_5b3Kb8om-3" value="询价任务" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="100" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mna81Xxy5MV_5b3Kb8om-4" value="Relation" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="439.74" as="sourcePoint" />
+            <mxPoint x="-40" y="439.74" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mna81Xxy5MV_5b3Kb8om-5" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" connectable="0" vertex="1" parent="mna81Xxy5MV_5b3Kb8om-4">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mna81Xxy5MV_5b3Kb8om-6" value="N" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=top;" connectable="0" vertex="1" parent="mna81Xxy5MV_5b3Kb8om-4">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mna81Xxy5MV_5b3Kb8om-7" value="询价任务分量" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-160" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mna81Xxy5MV_5b3Kb8om-8" value="交易对手" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="580" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mna81Xxy5MV_5b3Kb8om-10" value="初始数据" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-250" y="380" width="1060" height="130" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
