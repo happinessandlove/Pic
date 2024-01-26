@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-01-26T01:49:17.142Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="OeUepj4GpTL4wP6gzeUK" version="22.1.18" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-26T01:53:10.473Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="_9oIln3ThiFuDVUmz984" version="22.1.18" type="github">
   <diagram name="第 1 页" id="kjCEzAYDkIr64PraYfbx">
     <mxGraphModel dx="744" dy="405" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -104,10 +104,10 @@
           <mxGeometry x="-65" y="75" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="kkqj4pZTGer4sD4cTR9H-38" value="" style="group;fillColor=#002C85;rounded=1;strokeWidth=0;" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="159" y="300" width="501" height="40" as="geometry" />
+          <mxGeometry x="160" y="300" width="500" height="40" as="geometry" />
         </mxCell>
         <mxCell id="kkqj4pZTGer4sD4cTR9H-2" value="&lt;font color=&quot;#ffffff&quot;&gt;zofund-base&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="kkqj4pZTGer4sD4cTR9H-38" vertex="1">
-          <mxGeometry x="166.6439232409382" y="5" width="96.14072494669512" height="30" as="geometry" />
+          <mxGeometry x="166.31130063965887" y="5" width="95.94882729211089" height="30" as="geometry" />
         </mxCell>
         <mxCell id="kkqj4pZTGer4sD4cTR9H-39" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="210" y="670" width="310" height="40" as="geometry" />
@@ -288,6 +288,18 @@
         </mxCell>
         <mxCell id="GysrRo3YJwe-bO9KChuf-13" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;rotation=-90;" vertex="1" parent="1">
           <mxGeometry x="600.63" y="40.63" width="20" height="78.75" as="geometry" />
+        </mxCell>
+        <mxCell id="GysrRo3YJwe-bO9KChuf-14" value="投资交易业务" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="225" y="40.63" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GysrRo3YJwe-bO9KChuf-15" value="投资交易能力延申" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="378" y="40.63" width="102" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GysrRo3YJwe-bO9KChuf-16" value="一体化通用能力" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="478" y="40.63" width="102" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GysrRo3YJwe-bO9KChuf-17" value="O32能力" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="559.63" y="40.63" width="102" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
